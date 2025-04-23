@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -16,6 +17,12 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+      },
+      animation: {
+        'spin-slow': 'spin 7s linear infinite',
+      },
+      fontSize: {
+        'dynamic-base': 'var(--dynamic-font-size, 1rem)',
       },
     },
   },
