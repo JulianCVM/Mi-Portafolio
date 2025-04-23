@@ -13,49 +13,50 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white relative overflow-hidden">
       {/* Elementos decorativos de fondo */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-green-200 dark:bg-green-900 rounded-full -mr-32 -mt-32 opacity-20"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-200 dark:bg-green-900 rounded-full -ml-32 -mb-32 opacity-20"></div>
+      <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-green-200 dark:bg-green-900 rounded-full -mr-24 md:-mr-32 -mt-24 md:-mt-32 opacity-20"></div>
+      <div className="absolute bottom-0 left-0 w-48 md:w-64 h-48 md:h-64 bg-green-200 dark:bg-green-900 rounded-full -ml-24 md:-ml-32 -mb-24 md:-mb-32 opacity-20"></div>
       
-      <div className="container-custom relative z-10">
-        <h2 className="section-title text-center mb-12 text-gray-800 dark:text-white">{t('about.title')}</h2>
+      <div className="container-custom relative z-10 px-4 sm:px-6">
+        <h2 className="section-title text-center mb-8 md:mb-12 text-gray-800 dark:text-white">{t('about.title')}</h2>
         
         {/* Diseño tipo dashboard con grid - mejorada la distribución */}
         <div className="max-w-6xl mx-auto">
           
           {/* Fila principal - Perfil e introducción */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 mb-8">
             {/* Tarjeta de perfil */}
             <div className="lg:col-span-4">
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                <div className="p-5">
-                  <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 mb-5 shadow-md">
+                <div className="p-4 sm:p-5">
+                  <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 mb-4 sm:mb-5 shadow-md">
                     <img 
                       src="/placeholder-profile.jpg"
                       alt="Julián Villamizar" 
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
                       <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-2 rounded-full flex-shrink-0">
-                        <FaGraduationCap className="h-5 w-5" />
+                        <FaGraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
                       </span>
-                      <div className="text-base font-semibold text-gray-800 dark:text-white">{t('about.student')}</div>
+                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.student')}</div>
                     </div>
                     
                     <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
                       <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 p-2 rounded-full flex-shrink-0">
-                        <FaBriefcase className="h-5 w-5" />
+                        <FaBriefcase className="h-4 w-4 sm:h-5 sm:w-5" />
                       </span>
-                      <div className="text-base font-semibold text-gray-800 dark:text-white">{t('about.fullstack')}</div>
+                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.fullstack')}</div>
                     </div>
                     
                     <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
                       <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 p-2 rounded-full flex-shrink-0">
-                        <FaMusic className="h-5 w-5" />
+                        <FaMusic className="h-4 w-4 sm:h-5 sm:w-5" />
                       </span>
-                      <div className="text-base font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
+                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
                     </div>
                   </div>
                 </div>
@@ -64,17 +65,17 @@ export default function About() {
             
             {/* Tarjeta de introducción */}
             <div className="lg:col-span-8">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg h-full flex flex-col justify-center p-8">
-                <div className="space-y-5">
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg h-full flex flex-col justify-center p-4 sm:p-6 lg:p-8">
+                <div className="space-y-4 sm:space-y-5">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                     {t('about.intro1')} <span className="font-bold text-green-600 dark:text-green-400">Julián Villamizar</span>, {t('about.intro2')}
                   </p>
                   
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                     {t('about.intro3')}
                   </p>
                   
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                     {t('about.intro4')}
                   </p>
                 </div>
@@ -83,15 +84,15 @@ export default function About() {
           </div>
           
           {/* Encabezado de Habilidades Técnicas */}
-          <div className="bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 p-4 rounded-xl mb-8">
-            <div className="flex items-center gap-3">
-              <FaCode className="h-6 w-6 text-green-600 dark:text-green-400" />
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Habilidades Técnicas</h3>
+          <div className="bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 p-3 sm:p-4 rounded-xl mb-6 sm:mb-8">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <FaCode className="h-5 w-5 sm:h-6 sm:w-6 text-green-600 dark:text-green-400" />
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">Habilidades Técnicas</h3>
             </div>
           </div>
           
           {/* Habilidades técnicas - Diseño mejorado con cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {/* Paradigmas y Patrones */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <div className="bg-green-100 dark:bg-green-900/30 px-4 py-3 border-l-4 border-green-500">
@@ -202,28 +203,28 @@ export default function About() {
             
             {/* Frameworks */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-indigo-100 dark:bg-indigo-900/30 px-4 py-3 border-l-4 border-indigo-500">
-                <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <div className="bg-indigo-100 dark:bg-indigo-900/30 px-3 sm:px-4 py-3 border-l-4 border-indigo-500">
+                <h4 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
                   <FaServer className="text-indigo-600 dark:text-indigo-400" />
                   <span>Frameworks</span>
                 </h4>
               </div>
-              <div className="p-5">
-                <div className="flex items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm mb-3">
-                  <SiSpringboot className="text-3xl text-green-600 dark:text-green-400 mr-3" />
-                  <div className="flex-1">
-                    <div className="font-medium text-gray-800 dark:text-white">Spring Boot</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">Desarrollo de aplicaciones Java</div>
+              <div className="p-3 sm:p-5">
+                <div className="flex flex-col sm:flex-row items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm mb-3">
+                  <SiSpringboot className="text-2xl sm:text-3xl text-green-600 dark:text-green-400 mb-2 sm:mb-0 sm:mr-3" />
+                  <div className="flex-1 w-full">
+                    <div className="font-medium text-center sm:text-left text-gray-800 dark:text-white">Spring Boot</div>
+                    <div className="text-sm text-center sm:text-left text-gray-600 dark:text-gray-300 mb-1">Desarrollo de aplicaciones Java</div>
                     <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full">
                       <div className="bg-green-600 h-1.5 rounded-full" style={{width: '80%'}}></div>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
-                  <FaReact className="text-3xl text-blue-500 dark:text-blue-400 mr-3" />
-                  <div className="flex-1">
-                    <div className="font-medium text-gray-800 dark:text-white">React</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">Desarrollo de interfaces de usuario</div>
+                <div className="flex flex-col sm:flex-row items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <FaReact className="text-2xl sm:text-3xl text-blue-500 dark:text-blue-400 mb-2 sm:mb-0 sm:mr-3" />
+                  <div className="flex-1 w-full">
+                    <div className="font-medium text-center sm:text-left text-gray-800 dark:text-white">React</div>
+                    <div className="text-sm text-center sm:text-left text-gray-600 dark:text-gray-300 mb-1">Desarrollo de interfaces de usuario</div>
                     <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full">
                       <div className="bg-blue-500 h-1.5 rounded-full" style={{width: '85%'}}></div>
                     </div>
@@ -304,20 +305,20 @@ export default function About() {
           </div>
           
           {/* Perfil Personal */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-8">
-            <div className="bg-green-100 dark:bg-green-900/30 px-5 py-3 border-l-4 border-green-500">
-              <h3 className="flex items-center gap-2 text-xl font-bold text-gray-800 dark:text-white">
-                <FaLaptopCode className="h-5 w-5 text-green-600 dark:text-green-400" />
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden mb-6 sm:mb-8">
+            <div className="bg-green-100 dark:bg-green-900/30 px-4 sm:px-5 py-3 border-l-4 border-green-500">
+              <h3 className="flex items-center gap-2 text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
+                <FaLaptopCode className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 dark:text-green-400" />
                 <span>Perfil Personal</span>
               </h3>
             </div>
-            <div className="p-6">
-              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-5">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+            <div className="p-4 sm:p-6">
+              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 sm:p-5">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                   Soy una persona con gran capacidad de adaptabilidad, comunicación efectiva y una visión analítica que me permite entender y resolver problemas desde diferentes perspectivas. Me interesa profundamente el desarrollo full stack, con una proyección clara hacia el liderazgo técnico y la gestión de proyectos tecnológicos, áreas en las que aspiro consolidar mi carrera como futuro ingeniero de sistemas.
                 </p>
                 
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mt-4">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg mt-3 sm:mt-4">
                   Más allá del mundo del código, me encanta la música clásica, ya que me ayuda a concentrarme y mantenerme enfocado. Siempre estoy en búsqueda de nuevas tecnologías que pueda aprender y aplicar para crear soluciones reales que impacten positivamente.
                 </p>
               </div>
@@ -325,30 +326,30 @@ export default function About() {
           </div>
           
           {/* Educación y Experiencia */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {/* Educación */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-blue-100 dark:bg-blue-900/30 px-5 py-3 border-l-4 border-blue-500">
-                <h3 className="flex items-center gap-2 text-lg font-bold text-gray-800 dark:text-white">
-                  <FaGraduationCap className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <div className="bg-blue-100 dark:bg-blue-900/30 px-4 sm:px-5 py-3 border-l-4 border-blue-500">
+                <h3 className="flex items-center gap-2 text-base sm:text-lg font-bold text-gray-800 dark:text-white">
+                  <FaGraduationCap className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-blue-400" />
                   <span>Educación</span>
                 </h3>
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <ul className="space-y-3">
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
                     <div className="font-medium text-gray-800 dark:text-white">Tecnología en Desarrollo de Sistemas Informáticos</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">Unidades Tecnológicas de Santander (UTS)</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">En curso</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Unidades Tecnológicas de Santander (UTS)</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">En curso</div>
                   </li>
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
                     <div className="font-medium text-gray-800 dark:text-white">Programa de Formación</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">Campuslands</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">En curso</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Campuslands</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">En curso</div>
                   </li>
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
                     <div className="font-medium text-gray-800 dark:text-white">Certificación de Inglés B1</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">Curso de Inglés</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Curso de Inglés</div>
                   </li>
                 </ul>
               </div>
@@ -356,23 +357,23 @@ export default function About() {
             
             {/* Experiencia */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-green-100 dark:bg-green-900/30 px-5 py-3 border-l-4 border-green-500">
-                <h3 className="flex items-center gap-2 text-lg font-bold text-gray-800 dark:text-white">
-                  <FaBriefcase className="h-5 w-5 text-green-600 dark:text-green-400" />
+              <div className="bg-green-100 dark:bg-green-900/30 px-4 sm:px-5 py-3 border-l-4 border-green-500">
+                <h3 className="flex items-center gap-2 text-base sm:text-lg font-bold text-gray-800 dark:text-white">
+                  <FaBriefcase className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 dark:text-green-400" />
                   <span>Experiencia</span>
                 </h3>
               </div>
-              <div className="p-5">
+              <div className="p-3 sm:p-5">
                 <ul className="space-y-3">
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
                     <div className="font-medium text-gray-800 dark:text-white">Desarrollador - Solvo Global</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">Enero 2024 - Presente</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-2">Trabajo como desarrollador en una célula de desarrollo, aplicando conocimientos técnicos en proyectos reales.</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Enero 2024 - Presente</div>
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-2">Trabajo como desarrollador en una célula de desarrollo, aplicando conocimientos técnicos en proyectos reales.</div>
                   </li>
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
                     <div className="font-medium text-gray-800 dark:text-white">Proyecto Académico</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">Prototipo de Aplicación Móvil</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-2">Desarrollo de un prototipo de aplicación móvil como proyecto de grado.</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Prototipo de Aplicación Móvil</div>
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-2">Desarrollo de un prototipo de aplicación móvil como proyecto de grado.</div>
                   </li>
                 </ul>
               </div>
