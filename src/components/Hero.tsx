@@ -444,7 +444,7 @@ export default function Hero() {
               <span className="animate-blink ml-1">|</span>
             </h2>
             <p className="text-gray-300 text-lg mb-8 max-w-md">
-              Especializado en crear soluciones digitales modernas y atractivas, enfocadas en la experiencia del usuario.
+              Desarrollador Full Stack especializado en crear aplicaciones web robustas, desde la arquitectura del backend hasta interfaces dinámicas y escalables.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
