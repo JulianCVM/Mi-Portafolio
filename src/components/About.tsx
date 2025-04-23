@@ -1,8 +1,8 @@
 'use client'
 
-import { FaGraduationCap, FaBriefcase, FaCode, FaMusic, FaLaptopCode, FaDatabase, FaJava, FaPython, FaServer, FaPhp } from 'react-icons/fa'
-import { SiSpringboot, SiMysql, SiPostgresql, SiJavascript } from 'react-icons/si'
-import { TbBrandCodesandbox } from 'react-icons/tb'
+import { FaGraduationCap, FaBriefcase, FaCode, FaMusic, FaLaptopCode, FaDatabase, FaJava, FaPython, FaServer, FaPhp, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit } from 'react-icons/fa'
+import { SiSpringboot, SiMysql, SiPostgresql, SiJavascript, SiTailwindcss, SiExpress, SiTypescript, SiBootstrap, SiDjango, SiLaravel } from 'react-icons/si'
+import { TbBrandCodesandbox, TbBrandNextjs } from 'react-icons/tb'
 import { IoLayersOutline } from 'react-icons/io5'
 import { GiCubeforce } from 'react-icons/gi'
 
@@ -125,21 +125,33 @@ export default function About() {
               </div>
               <div className="p-5">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <FaJava className="text-3xl text-red-600 dark:text-red-400 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">Java</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-red-600 h-1.5 rounded-full" style={{width: '85%'}}></div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <SiJavascript className="text-3xl text-yellow-500 dark:text-yellow-400 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">JavaScript</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-yellow-500 h-1.5 rounded-full" style={{width: '90%'}}></div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <FaPhp className="text-3xl text-indigo-600 dark:text-indigo-400 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">PHP</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-indigo-600 h-1.5 rounded-full" style={{width: '75%'}}></div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <FaPython className="text-3xl text-blue-600 dark:text-blue-400 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">Python</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-blue-600 h-1.5 rounded-full" style={{width: '70%'}}></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -168,6 +180,13 @@ export default function About() {
                     <div className="text-sm text-gray-300 dark:text-gray-300">Organización por capacidades de negocio</div>
                   </div>
                 </div>
+                <div className="flex items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="mr-3 w-2 h-10 bg-purple-500 rounded-full"></div>
+                  <div>
+                    <div className="font-medium text-white dark:text-white">MVW</div>
+                    <div className="text-sm text-gray-300 dark:text-gray-300">Model-View-Whatever, arquitectura flexible</div>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -180,11 +199,24 @@ export default function About() {
                 </h4>
               </div>
               <div className="p-5">
-                <div className="flex items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                <div className="flex items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm mb-3">
                   <SiSpringboot className="text-3xl text-green-600 dark:text-green-400 mr-3" />
-                  <div>
+                  <div className="flex-1">
                     <div className="font-medium text-white dark:text-white">Spring Boot</div>
-                    <div className="text-sm text-gray-300 dark:text-gray-300">Desarrollo de aplicaciones Java</div>
+                    <div className="text-sm text-gray-300 dark:text-gray-300 mb-1">Desarrollo de aplicaciones Java</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full">
+                      <div className="bg-green-600 h-1.5 rounded-full" style={{width: '80%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <FaReact className="text-3xl text-blue-500 dark:text-blue-400 mr-3" />
+                  <div className="flex-1">
+                    <div className="font-medium text-white dark:text-white">React</div>
+                    <div className="text-sm text-gray-300 dark:text-gray-300 mb-1">Desarrollo de interfaces de usuario</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full">
+                      <div className="bg-blue-500 h-1.5 rounded-full" style={{width: '85%'}}></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -200,32 +232,62 @@ export default function About() {
               </div>
               <div className="p-5">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <SiMysql className="text-3xl text-blue-600 dark:text-blue-400 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">MySQL</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-blue-600 h-1.5 rounded-full" style={{width: '90%'}}></div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
                     <SiPostgresql className="text-3xl text-blue-800 dark:text-blue-500 mb-2" />
                     <div className="font-medium text-center text-white dark:text-white">PostgreSQL</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-blue-800 h-1.5 rounded-full" style={{width: '85%'}}></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Aprendizaje Continuo */}
+            {/* Tecnologías Frontend */}
             <div className="bg-gray-800 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-teal-900/30 px-4 py-3 border-l-4 border-teal-500">
+              <div className="bg-orange-900/30 px-4 py-3 border-l-4 border-orange-500">
                 <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-200 dark:text-gray-200">
-                  <TbBrandCodesandbox className="text-teal-400 dark:text-teal-400" />
-                  <span>Aprendizaje Continuo</span>
+                  <FaHtml5 className="text-orange-400 dark:text-orange-400" />
+                  <span>Tecnologías Frontend</span>
                 </h4>
               </div>
               <div className="p-5">
-                <div className="mb-2 text-center text-gray-300 dark:text-gray-300">
-                  Siempre en búsqueda de nuevos conocimientos y tecnologías
-                </div>
-                <div className="w-full bg-gray-600 dark:bg-gray-600 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-teal-400 via-green-500 to-green-600 h-3 rounded-full w-[75%]"></div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
+                    <FaHtml5 className="text-3xl text-orange-500 dark:text-orange-400 mb-2" />
+                    <div className="font-medium text-center text-white dark:text-white">HTML5</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-orange-500 h-1.5 rounded-full" style={{width: '95%'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
+                    <FaCss3Alt className="text-3xl text-blue-500 dark:text-blue-400 mb-2" />
+                    <div className="font-medium text-center text-white dark:text-white">CSS3</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-blue-500 h-1.5 rounded-full" style={{width: '90%'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
+                    <SiTailwindcss className="text-3xl text-cyan-500 dark:text-cyan-400 mb-2" />
+                    <div className="font-medium text-center text-white dark:text-white">Tailwind</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{width: '85%'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-700 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-600 transition-all">
+                    <SiBootstrap className="text-3xl text-purple-500 dark:text-purple-400 mb-2" />
+                    <div className="font-medium text-center text-white dark:text-white">Bootstrap</div>
+                    <div className="w-full bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-purple-500 h-1.5 rounded-full" style={{width: '80%'}}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
