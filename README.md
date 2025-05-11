@@ -122,12 +122,12 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](L
 
 ## 📞 Contacto
 
-- 📧 Email: [tu-email@example.com](mailto:tu-email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/tu-usuario](https://linkedin.com/in/tu-usuario)
-- 🐙 GitHub: [github.com/tu-usuario](https://github.com/tu-usuario)
+- 📧 Email: [juliancamilovm22@gmail.com](mailto:juliancamilovm22@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/julian-camilo-villamizar-montañez-a65ab9232](https://www.linkedin.com/in/julian-camilo-villamizar-montañez-a65ab9232)
+- 🐙 GitHub: [github.com/JulianCVM](https://github.com/JulianCVM)
 
 ---
 
 <div align="center">
-  <p>Hecho con ❤️ por [Tu Nombre]</p>
+  <p>Hecho con ❤️ por [Julian]</p>
 </div> 
