@@ -386,17 +386,125 @@ export default function About() {
                   </li>
                   
                   <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-purple-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">Dashboard GeoApp</div>
+                    <div className="font-bold text-gray-800 dark:text-white text-base">GeoApp Admin Dashboard</div>
                     <div className="font-medium text-purple-600 dark:text-purple-400 text-sm mt-1">Proyecto de grado universitario</div>
                     <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Desarrollé un dashboard de administración para la aplicación móvil GeoApp, diseñado para gestionar centralmente reportes georreferenciados, usuarios y logros. Facilita el monitoreo de la actividad de la aplicación, gestión de usuarios y logros, y toma de decisiones basada en datos. Combina eficiencia, interactividad y análisis de datos espaciales.
+                      Panel de administración completo para la aplicación GeoApp, diseñado para gestionar reportes georreferenciados, usuarios y logros. Proporciona una interfaz administrativa integral para supervisar todos los aspectos de la aplicación móvil con datos espaciales.
                     </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Laravel</span>
-                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP</span>
+                    
+                    <div className="mt-4 space-y-3">
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🗺️ Funcionalidades Principales</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Gestión de Reportes:</strong> Visualización y administración de reportes georreferenciados</li>
+                          <li>• <strong>Administración de Usuarios:</strong> Gestión de cuentas y permisos</li>
+                          <li>• <strong>Sistema de Logros:</strong> Visualización y asignación de achievements</li>
+                          <li>• <strong>Métricas y Estadísticas:</strong> Monitoreo de uso y analytics</li>
+                          <li>• <strong>Explorador de BD:</strong> Consultas interactivas a la base de datos</li>
+                          <li>• <strong>Mapas Interactivos:</strong> Visualización de datos espaciales</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Backend</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Laravel 10:</strong> Framework PHP moderno con estructura MVC</li>
+                          <li>• <strong>Controladores Especializados:</strong> Auth, Dashboard, Reports, Users, Achievements</li>
+                          <li>• <strong>Servicio Supabase:</strong> SupabaseSecondaryService para conexión a BD</li>
+                          <li>• <strong>Modelos Eloquent:</strong> ORM para gestión de datos</li>
+                          <li>• <strong>Middleware Personalizado:</strong> Control de acceso y autenticación</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🌍 Datos Espaciales y BD</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>PostgreSQL + PostGIS:</strong> Base de datos con extensión espacial</li>
+                          <li>• <strong>Supabase Platform:</strong> Backend-as-a-Service integrado</li>
+                          <li>• <strong>Datos Georreferenciados:</strong> Manejo de coordenadas y ubicaciones</li>
+                          <li>• <strong>Consultas Espaciales:</strong> Queries especializadas para geodatos</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">💻 Frontend y Vistas</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Blade Templates:</strong> Motor de plantillas de Laravel</li>
+                          <li>• <strong>Explorador de BD:</strong> query_form.blade.php, relations.blade.php</li>
+                          <li>• <strong>Visualización de Esquemas:</strong> schema.blade.php, table.blade.php</li>
+                          <li>• <strong>Dashboard Interactivo:</strong> Interfaces administrativas responsivas</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Laravel 10</span>
+                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP 8.1+</span>
                       <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">PostgreSQL</span>
                       <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Supabase</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">PostGIS</span>
                       <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Blade</span>
+                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Eloquent ORM</span>
+                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Datos Espaciales</span>
+                    </div>
+                  </li>
+                  
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-amber-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">Colombian-Coffee API Backend</div>
+                    <div className="font-medium text-amber-600 dark:text-amber-400 text-sm mt-1">Proyecto de Campus</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      Sistema backend completo para gestión de variedades de café colombiano, desarrollado siguiendo Clean Architecture y principios SOLID con PHP 8.x. Me encargué del desarrollo completo del backend implementando una arquitectura modular escalable.
+                    </div>
+                    
+                    <div className="mt-4 space-y-3">
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Implementada</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300">
+                          Model → DTO → Repository Domain → Eloquent Repository → Casos de Uso → Controller → Router → Container (Inyección de Dependencias) → index.php
+                        </p>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🔧 Patrones y Tecnologías</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Repository Pattern:</strong> Abstracción de acceso a datos</li>
+                          <li>• <strong>Dependency Injection:</strong> PHP-DI Container</li>
+                          <li>• <strong>Use Cases:</strong> Encapsulación de lógica de negocio</li>
+                          <li>• <strong>DTO Pattern:</strong> Validación con Respect\Validation</li>
+                          <li>• <strong>API RESTful:</strong> Endpoints organizados por módulos</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🛡️ Seguridad y Middleware</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>JWT Authentication:</strong> Autenticación stateless</li>
+                          <li>• <strong>CORS Middleware:</strong> Comunicación frontend-backend</li>
+                          <li>• <strong>Role Middleware:</strong> Control de acceso basado en roles</li>
+                          <li>• <strong>Prepared Statements:</strong> Prevención de inyecciones SQL</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🐳 DevOps y Containerización</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Docker & DevContainer:</strong> Entorno reproducible</li>
+                          <li>• <strong>MySQL 8.4.3:</strong> Base de datos containerizada</li>
+                          <li>• <strong>VS Code Integration:</strong> Desarrollo integrado</li>
+                          <li>• <strong>Composer:</strong> Gestión de dependencias</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP 8.x</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Slim Framework</span>
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Eloquent ORM</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">PHP-DI</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">MySQL</span>
+                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">JWT</span>
+                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Docker</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Clean Architecture</span>
                     </div>
                   </li>
                 </ul>
