@@ -17,10 +17,79 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('todos')
 
   const projects: Project[] = [
-    // Los proyectos se agregarán gradualmente
+    {
+      id: 1,
+      title: '🏦 Sistema de Cuotas Banco CL',
+      description: 'Sistema de base de datos completo para gestionar cuotas de manejo de tarjetas bancarias con lógica financiera compleja, triggers automáticos y procedimientos almacenados.',
+      image: '/placeholder-project.jpg',
+      tags: ['mysql', 'database', 'fintech', 'triggers', 'procedures'],
+      demoUrl: 'https://github.com/JulianCVM/Proyecto_Banco_CL_Julian_Villamizar',
+      githubUrl: 'https://github.com/JulianCVM/Proyecto_Banco_CL_Julian_Villamizar',
+    },
+    {
+      id: 2,
+      title: '☕ Colombian Coffee API',
+      description: 'Sistema backend completo para gestión de variedades de café colombiano con Clean Architecture, PHP 8.x, DevContainer y documentación técnica completa.',
+      image: '/placeholder-project.jpg',
+      tags: ['php', 'clean-architecture', 'slim', 'docker', 'api'],
+      demoUrl: 'https://github.com/JulianCVM/Colombian-Coffee',
+      githubUrl: 'https://github.com/JulianCVM/Colombian-Coffee',
+    },
+    {
+      id: 3,
+      title: '🗺️ GeoApp Admin Dashboard',
+      description: 'Panel de administración para aplicación móvil GeoApp con Laravel 10, manejo de datos espaciales PostGIS, y gestión de reportes georreferenciados.',
+      image: '/placeholder-project.jpg',
+      tags: ['laravel', 'php', 'postgis', 'supabase', 'gis'],
+      demoUrl: 'https://github.com/JulianCVM/geoAppAdminDashboard',
+      githubUrl: 'https://github.com/JulianCVM/geoAppAdminDashboard',
+    },
+    {
+      id: 4,
+      title: '🏁 Formula 1 API Backend',
+      description: 'API REST completa para gestión de datos de Fórmula 1 con arquitectura hexagonal, Node.js, MongoDB y configuración completa con Docker Compose.',
+      image: '/placeholder-project.jpg',
+      tags: ['nodejs', 'mongodb', 'docker', 'hexagonal', 'api'],
+      demoUrl: 'https://github.com/Arenas07/formula_1/tree/main',
+      githubUrl: 'https://github.com/Arenas07/formula_1/tree/main',
+    },
+    {
+      id: 5,
+      title: '📱 GeoApp Mobile (Beta)',
+      description: 'Aplicación móvil para reportes georreferenciados con sistema de logros, mapas interactivos y funcionalidades de geolocalización avanzadas.',
+      image: '/placeholder-project.jpg',
+      tags: ['mobile', 'react-native', 'geolocation', 'maps', 'firebase'],
+      demoUrl: 'https://github.com/JuanJml01/geoappbeta',
+      githubUrl: 'https://github.com/JuanJml01/geoappbeta',
+    },
+    {
+      id: 6,
+      title: '🤖 Sistema LLM con Java',
+      description: 'Sistema modular desarrollado en Java con Spring Boot para integrar modelos de lenguaje personalizados (LLMs) con arquitectura de microservicios.',
+      image: '/placeholder-project.jpg',
+      tags: ['java', 'spring-boot', 'llm', 'microservices', 'ai'],
+      demoUrl: 'https://github.com/JulianCVM/avance-proyecto-java',
+      githubUrl: 'https://github.com/JulianCVM/avance-proyecto-java',
+    }
   ]
 
-  const filters = ['todos']
+  const filters = [
+    'todos', 
+    'php', 
+    'laravel', 
+    'java', 
+    'nodejs', 
+    'mysql', 
+    'mongodb', 
+    'docker', 
+    'api', 
+    'clean-architecture',
+    'hexagonal',
+    'fintech',
+    'gis',
+    'mobile',
+    'ai'
+  ]
 
   const filteredProjects = activeFilter === 'todos' 
     ? projects 

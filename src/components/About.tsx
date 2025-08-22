@@ -48,24 +48,24 @@ export default function About() {
                         <FaMusic className="h-4 w-4" />
                       </span>
                       <div className="text-sm font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
-                    </div>
-                  </div>
                 </div>
-                
+              </div>
+            </div>
+            
                 {/* Texto de introducción */}
                 <div className="lg:col-span-3">
                   <div className="space-y-4">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                      {t('about.intro1')} <span className="font-bold text-green-600 dark:text-green-400">Julián Villamizar</span>, {t('about.intro2')}
-                    </p>
-                    
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                      {t('about.intro3')}
-                    </p>
-                    
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                      {t('about.intro4')}
-                    </p>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                    {t('about.intro1')} <span className="font-bold text-green-600 dark:text-green-400">Julián Villamizar</span>, {t('about.intro2')}
+                  </p>
+                  
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                    {t('about.intro3')}
+                  </p>
+                  
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                    {t('about.intro4')}
+                  </p>
                   </div>
                 </div>
               </div>
