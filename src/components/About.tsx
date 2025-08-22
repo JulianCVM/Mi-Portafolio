@@ -1,7 +1,7 @@
 'use client'
 
 import { FaGraduationCap, FaBriefcase, FaCode, FaMusic, FaLaptopCode, FaDatabase, FaJava, FaPython, FaServer, FaPhp, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit } from 'react-icons/fa'
-import { SiSpringboot, SiMysql, SiPostgresql, SiJavascript, SiTailwindcss, SiExpress, SiTypescript, SiBootstrap, SiDjango, SiLaravel } from 'react-icons/si'
+import { SiSpringboot, SiMysql, SiPostgresql, SiJavascript, SiTailwindcss, SiExpress, SiTypescript, SiBootstrap, SiDjango, SiLaravel, SiSharp, SiDotnet } from 'react-icons/si'
 import { TbBrandCodesandbox, TbBrandNextjs } from 'react-icons/tb'
 import { IoLayersOutline } from 'react-icons/io5'
 import { GiCubeforce } from 'react-icons/gi'
@@ -146,6 +146,20 @@ export default function About() {
                       <div className="bg-blue-600 h-1.5 rounded-full" style={{width: '100%'}}></div>
                     </div>
                   </div>
+                  <div className="flex flex-col items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                    <SiSharp className="text-3xl text-purple-600 dark:text-purple-400 mb-2" />
+                    <div className="font-medium text-center text-gray-800 dark:text-white">C#</div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-purple-600 h-1.5 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
+                    <SiTypescript className="text-3xl text-blue-500 dark:text-blue-400 mb-2" />
+                    <div className="font-medium text-center text-gray-800 dark:text-white">TypeScript</div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full mt-2">
+                      <div className="bg-blue-500 h-1.5 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -206,6 +220,16 @@ export default function About() {
                     <div className="text-sm text-center sm:text-left text-gray-600 dark:text-gray-300 mb-1">Desarrollo de aplicaciones Java</div>
                     <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full">
                       <div className="bg-green-600 h-1.5 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row items-center bg-gray-100 dark:bg-gray-700 p-3 rounded-lg shadow-sm mb-3">
+                  <SiDotnet className="text-2xl sm:text-3xl text-purple-600 dark:text-purple-400 mb-2 sm:mb-0 sm:mr-3" />
+                  <div className="flex-1 w-full">
+                    <div className="font-medium text-center sm:text-left text-gray-800 dark:text-white">.NET + Entity Framework</div>
+                    <div className="text-sm text-center sm:text-left text-gray-600 dark:text-gray-300 mb-1">Desarrollo de aplicaciones C#</div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-600 h-1.5 rounded-full">
+                      <div className="bg-purple-600 h-1.5 rounded-full" style={{width: '100%'}}></div>
                     </div>
                   </div>
                 </div>
