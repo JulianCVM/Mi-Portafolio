@@ -69,6 +69,15 @@ export default function Projects() {
       tags: ['java', 'spring-boot', 'llm', 'microservices', 'ai'],
       demoUrl: 'https://github.com/JulianCVM/avance-proyecto-java',
       githubUrl: 'https://github.com/JulianCVM/avance-proyecto-java',
+    },
+    {
+      id: 7,
+      title: '📊 API de Reportes en Tiempo Real',
+      description: 'API escalable con ASP.NET Core que recibe eventos en tiempo real, los almacena en SQL Server y proporciona reportes agregados con REST y SignalR. Arquitectura hexagonal con Docker y Kubernetes.',
+      image: '/placeholder-project.jpg',
+      tags: ['csharp', 'dotnet', 'signalr', 'sqlserver', 'kubernetes', 'docker', 'clean-architecture', 'api'],
+      demoUrl: 'https://github.com/JulianCVM/.net-proyect',
+      githubUrl: 'https://github.com/JulianCVM/.net-proyect',
     }
   ]
 
@@ -78,10 +87,15 @@ export default function Projects() {
     'laravel', 
     'java', 
     'nodejs', 
+    'csharp',
+    'dotnet',
     'mysql', 
     'mongodb', 
+    'sqlserver',
     'docker', 
+    'kubernetes',
     'api', 
+    'signalr',
     'clean-architecture',
     'hexagonal',
     'fintech',
@@ -121,10 +135,15 @@ export default function Projects() {
                     {filter === 'laravel' && '🔴 Laravel'}
                     {filter === 'java' && '☕ Java'}
                     {filter === 'nodejs' && '🟢 Node.js'}
+                    {filter === 'csharp' && '🔷 C#'}
+                    {filter === 'dotnet' && '🟣 .NET'}
                     {filter === 'mysql' && '🗄️ MySQL'}
                     {filter === 'mongodb' && '🍃 MongoDB'}
+                    {filter === 'sqlserver' && '🔵 SQL Server'}
                     {filter === 'docker' && '🐳 Docker'}
+                    {filter === 'kubernetes' && '⚓ Kubernetes'}
                     {filter === 'api' && '🔗 API'}
+                    {filter === 'signalr' && '📡 SignalR'}
                     {filter === 'clean-architecture' && '🏗️ Clean Arch'}
                     {filter === 'hexagonal' && '⬡ Hexagonal'}
                     {filter === 'fintech' && '💳 FinTech'}
@@ -153,6 +172,7 @@ export default function Projects() {
                     {project.id === 4 && '🏁'}
                     {project.id === 5 && '📱'}
                     {project.id === 6 && '🤖'}
+                    {project.id === 7 && '📊'}
                   </div>
                   <div className="text-sm font-medium text-gray-600 dark:text-gray-400">
                     {project.tags[0].toUpperCase()}
