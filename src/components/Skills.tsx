@@ -1,7 +1,7 @@
 'use client'
 
 import { FaCode, FaServer, FaTools, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaPhp, FaDatabase, FaGithub, FaDocker, FaFigma, FaBolt, FaCloud, FaPython } from 'react-icons/fa'
-import { SiExpress, SiMongodb, SiMysql, SiPostgresql, SiJavascript, SiTailwindcss, SiTypescript, SiSpringboot, SiFirebase, SiObsidian, SiNotion, SiXampp, SiPostman, SiFlutter, SiDart, SiSharp, SiLaravel, SiDotnet } from 'react-icons/si'
+import { SiExpress, SiMongodb, SiMysql, SiPostgresql, SiJavascript, SiTailwindcss, SiTypescript, SiSpringboot, SiFirebase, SiObsidian, SiNotion, SiXampp, SiPostman, SiFlutter, SiDart, SiSharp, SiLaravel, SiDotnet, SiKubernetes } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { VscCode, VscVm } from 'react-icons/vsc'
 import { useLanguage } from '@/context/LanguageContext'
@@ -30,9 +30,9 @@ export default function Skills() {
       skills: [
         { name: 'Laravel', icon: <SiLaravel className="text-red-500 w-5 h-5" /> },
         { name: 'Spring Boot', icon: <SiSpringboot className="text-green-600 w-5 h-5" /> },
-        { name: '.NET', icon: <SiDotnet className="text-purple-600 w-5 h-5" /> },
-        { name: 'Laragon', icon: <FaServer className="text-blue-500 w-5 h-5" /> },
-        { name: 'Node.js', icon: <FaNodeJs className="text-green-500 w-5 h-5" /> }
+        { name: '.NET + Entity Framework', icon: <SiDotnet className="text-purple-600 w-5 h-5" /> },
+        { name: 'Node.js + Express', icon: <FaNodeJs className="text-green-500 w-5 h-5" /> },
+        { name: 'Slim Framework', icon: <FaServer className="text-blue-500 w-5 h-5" /> }
       ]
     },
     paradigms: {
@@ -57,6 +57,16 @@ export default function Skills() {
         { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-800 w-5 h-5" /> },
         { name: 'MongoDB', icon: <SiMongodb className="text-green-600 w-5 h-5" /> },
         { name: 'SQL Server', icon: <FaDatabase className="text-red-600 w-5 h-5" /> }
+      ]
+    },
+    devops: {
+      title: 'DevOps y Containerización',
+      icon: <FaDocker className="text-blue-500 w-6 h-6" />,
+      skills: [
+        { name: 'Docker', icon: <FaDocker className="text-blue-500 w-5 h-5" /> },
+        { name: 'Docker Compose', icon: <FaDocker className="text-blue-600 w-5 h-5" /> },
+        { name: 'Kubernetes', icon: <SiKubernetes className="text-blue-700 w-5 h-5" /> },
+        { name: 'DevContainer', icon: <FaDocker className="text-green-600 w-5 h-5" /> }
       ]
     },
     frontend: {
@@ -160,6 +170,23 @@ export default function Skills() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {skills.databases.skills.map((skill) => (
                 <div key={skill.name} className="flex items-center py-3 px-4 bg-white/70 dark:bg-gray-900/60 border border-cyan-200/50 dark:border-cyan-800/30 rounded-lg hover:bg-cyan-50/80 dark:hover:bg-gray-800/90 transition-colors">
+                  <div className="mr-3">{skill.icon}</div>
+                  <span className="text-gray-800 dark:text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* DevOps y Containerización - Tarjeta azul especializada */}
+          <div className="bg-gradient-to-r from-blue-100/80 to-blue-50/60 dark:from-blue-950/40 dark:to-blue-900/30 rounded-xl border border-blue-300/50 dark:border-blue-800/30 p-6 shadow-lg">
+            <div className="flex items-center mb-6">
+              <FaDocker className="text-blue-600 dark:text-blue-400 h-7 w-7 mr-3" />
+              <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400">{skills.devops.title}</h3>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {skills.devops.skills.map((skill) => (
+                <div key={skill.name} className="flex items-center py-3 px-4 bg-white/70 dark:bg-gray-900/60 border border-blue-200/50 dark:border-blue-800/30 rounded-lg hover:bg-blue-50/80 dark:hover:bg-gray-800/90 transition-colors">
                   <div className="mr-3">{skill.icon}</div>
                   <span className="text-gray-800 dark:text-white text-sm font-medium">{skill.name}</span>
                 </div>

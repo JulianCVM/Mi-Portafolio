@@ -17,63 +17,10 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('todos')
 
   const projects: Project[] = [
-    {
-      id: 1,
-      title: 'E-commerce Website',
-      description: 'Tienda en línea completa con carrito de compras, proceso de pago y panel de administración.',
-      image: '/placeholder-project.jpg',
-      tags: ['react', 'nodejs', 'mongodb'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project1',
-    },
-    {
-      id: 2,
-      title: 'App de Gestión de Tareas',
-      description: 'Aplicación para gestionar tareas con funcionalidad de arrastrar y soltar, etiquetas y filtros.',
-      image: '/placeholder-project.jpg',
-      tags: ['react', 'firebase'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project2',
-    },
-    {
-      id: 3,
-      title: 'Blog Personal',
-      description: 'Blog con sistema de gestión de contenidos, comentarios y panel de administración.',
-      image: '/placeholder-project.jpg',
-      tags: ['nextjs', 'tailwind'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project3',
-    },
-    {
-      id: 4,
-      title: 'Dashboard Analítico',
-      description: 'Panel de control con gráficos interactivos y visualización de datos en tiempo real.',
-      image: '/placeholder-project.jpg',
-      tags: ['react', 'chartjs', 'nodejs'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project4',
-    },
-    {
-      id: 5,
-      title: 'App de Clima',
-      description: 'Aplicación que muestra el clima actual y pronóstico utilizando la API de OpenWeatherMap.',
-      image: '/placeholder-project.jpg',
-      tags: ['react', 'api'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project5',
-    },
-    {
-      id: 6,
-      title: 'Clon de Netflix',
-      description: 'Réplica de la interfaz de Netflix con funcionalidad de reproducción de trailers.',
-      image: '/placeholder-project.jpg',
-      tags: ['react', 'firebase', 'api'],
-      demoUrl: 'https://example.com',
-      githubUrl: 'https://github.com/tu-usuario/project6',
-    }
+    // Los proyectos se agregarán gradualmente
   ]
 
-  const filters = ['todos', 'react', 'nextjs', 'nodejs', 'mongodb', 'firebase', 'api', 'tailwind']
+  const filters = ['todos']
 
   const filteredProjects = activeFilter === 'todos' 
     ? projects 
