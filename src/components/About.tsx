@@ -352,290 +352,68 @@ export default function About() {
                   <span>Experiencia</span>
                 </h3>
               </div>
-              <div className="p-3 sm:p-5">
-                <ul className="space-y-4">
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-green-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">Practicante - Programador</div>
-                    <div className="font-medium text-green-600 dark:text-green-400 text-sm mt-1">SOLVO S.A.S - Campuslands</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Enero 2024 - Presente</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Colaboré en el diseño y desarrollo de módulos de software dentro de equipos ágiles, utilizando Git para control de versiones. Contribuí al diseño de arquitectura backend con Node.js, TypeScript y Prisma ORM, aplicando mejores prácticas y optimizaciones de rendimiento. Participé activamente en múltiples proyectos, apoyando el desarrollo, pruebas y mejoras de rendimiento para garantizar calidad y confiabilidad.
+              <div className="p-4 sm:p-5">
+                <div className="space-y-4">
+                  <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-green-500">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <div className="font-bold text-gray-800 dark:text-white text-base">Practicante - Programador</div>
+                        <div className="font-medium text-green-600 dark:text-green-400 text-sm">SOLVO S.A.S - Campuslands</div>
+                        <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">Enero 2024 - Presente</div>
+                      </div>
+                      <div className="bg-green-100 dark:bg-green-900 px-3 py-1 rounded-full">
+                        <span className="text-green-700 dark:text-green-300 text-xs font-medium">Actual</span>
+                      </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
+                    <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
+                      Desarrollo de módulos de software en equipos ágiles con Node.js, TypeScript y Prisma ORM. Aplicación de mejores prácticas, optimizaciones de rendimiento y arquitectura backend escalable.
+                    </div>
+                    <div className="flex flex-wrap gap-2">
                       <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Node.js</span>
                       <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">TypeScript</span>
                       <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Prisma ORM</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Git</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Metodologías Ágiles</span>
                     </div>
-                  </li>
+                  </div>
                   
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-blue-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">Sistema de Agente Inteligente con LLM Personalizado</div>
-                    <div className="font-medium text-blue-600 dark:text-blue-400 text-sm mt-1">Universidad</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Desarrollo de un sistema modular en Java usando Spring Boot para integrar modelos de lenguaje personalizados (LLMs) para procesamiento de tareas y aprendizaje. Implementé controladores REST, lógica de negocio, persistencia y optimicé el flujo de trabajo entre capas.
+                  <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-blue-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base mb-1">Desarrollador Backend</div>
+                    <div className="font-medium text-blue-600 dark:text-blue-400 text-sm">Proyectos Académicos y Profesionales</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-xs mt-1 mb-3">2021 - Presente</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
+                      Desarrollo de sistemas completos con arquitecturas avanzadas (Clean Architecture, Hexagonal), especialización en APIs RESTful, sistemas financieros, GIS y bases de datos complejas.
                     </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                      <div className="text-xs">
+                        <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">🏗️ Arquitecturas:</div>
+                        <div className="text-gray-600 dark:text-gray-400">Clean Architecture, Hexagonal, MVC</div>
+                      </div>
+                      <div className="text-xs">
+                        <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">🗄️ Especialidades:</div>
+                        <div className="text-gray-600 dark:text-gray-400">FinTech, GIS, DevOps, APIs</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
                       <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Java</span>
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Spring Boot</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">HTML</span>
-                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">JavaScript</span>
-                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">Python</span>
-                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">CSS</span>
-                    </div>
-                  </li>
-                  
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-purple-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">GeoApp Admin Dashboard</div>
-                    <div className="font-medium text-purple-600 dark:text-purple-400 text-sm mt-1">Proyecto de grado universitario</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Panel de administración completo para la aplicación GeoApp, diseñado para gestionar reportes georreferenciados, usuarios y logros. Proporciona una interfaz administrativa integral para supervisar todos los aspectos de la aplicación móvil con datos espaciales.
-                    </div>
-                    
-                    <div className="mt-4 space-y-3">
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🗺️ Funcionalidades Principales</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Gestión de Reportes:</strong> Visualización y administración de reportes georreferenciados</li>
-                          <li>• <strong>Administración de Usuarios:</strong> Gestión de cuentas y permisos</li>
-                          <li>• <strong>Sistema de Logros:</strong> Visualización y asignación de achievements</li>
-                          <li>• <strong>Métricas y Estadísticas:</strong> Monitoreo de uso y analytics</li>
-                          <li>• <strong>Explorador de BD:</strong> Consultas interactivas a la base de datos</li>
-                          <li>• <strong>Mapas Interactivos:</strong> Visualización de datos espaciales</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Backend</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Laravel 10:</strong> Framework PHP moderno con estructura MVC</li>
-                          <li>• <strong>Controladores Especializados:</strong> Auth, Dashboard, Reports, Users, Achievements</li>
-                          <li>• <strong>Servicio Supabase:</strong> SupabaseSecondaryService para conexión a BD</li>
-                          <li>• <strong>Modelos Eloquent:</strong> ORM para gestión de datos</li>
-                          <li>• <strong>Middleware Personalizado:</strong> Control de acceso y autenticación</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🌍 Datos Espaciales y BD</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>PostgreSQL + PostGIS:</strong> Base de datos con extensión espacial</li>
-                          <li>• <strong>Supabase Platform:</strong> Backend-as-a-Service integrado</li>
-                          <li>• <strong>Datos Georreferenciados:</strong> Manejo de coordenadas y ubicaciones</li>
-                          <li>• <strong>Consultas Espaciales:</strong> Queries especializadas para geodatos</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">💻 Frontend y Vistas</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Blade Templates:</strong> Motor de plantillas de Laravel</li>
-                          <li>• <strong>Explorador de BD:</strong> query_form.blade.php, relations.blade.php</li>
-                          <li>• <strong>Visualización de Esquemas:</strong> schema.blade.php, table.blade.php</li>
-                          <li>• <strong>Dashboard Interactivo:</strong> Interfaces administrativas responsivas</li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Laravel 10</span>
-                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP 8.1+</span>
-                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">PostgreSQL</span>
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Supabase</span>
-                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">PostGIS</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Blade</span>
-                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Eloquent ORM</span>
-                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Datos Espaciales</span>
-                    </div>
-                  </li>
-                  
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-green-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">🏁 Fórmula 1 - Backend API</div>
-                    <div className="font-medium text-green-600 dark:text-green-400 text-sm mt-1">Proyecto Campus</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      API REST completa para gestión integral de datos de Fórmula 1, desarrollada con Node.js, Express y MongoDB. Implementa arquitectura hexagonal (Clean Architecture) con configuración completa en Docker y documentación automática con Swagger.
-                    </div>
-                    
-                    <div className="mt-4 space-y-3">
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Hexagonal</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>DDD (Domain-Driven Design):</strong> Módulos funcionales independientes</li>
-                          <li>• <strong>Separación de Capas:</strong> Controller → Service → Repository → Models</li>
-                          <li>• <strong>Módulos Especializados:</strong> Auth, Circuitos, Equipos, Pilotos, Simulación</li>
-                          <li>• <strong>Shared Components:</strong> Respuestas HTTP y utilidades comunes</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🐳 DevOps y Containerización</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Docker Compose:</strong> Orquestación de servicios (App + MongoDB)</li>
-                          <li>• <strong>Hot Reload:</strong> Desarrollo con nodemon y recarga automática</li>
-                          <li>• <strong>Health Checks:</strong> Monitoreo automático de MongoDB</li>
-                          <li>• <strong>Persistencia:</strong> Volúmenes para datos permanentes</li>
-                          <li>• <strong>Networking:</strong> Comunicación interna entre contenedores</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🛡️ Seguridad y Autenticación</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>JWT Authentication:</strong> Tokens seguros con expiración</li>
-                          <li>• <strong>Autorización por Roles:</strong> Middleware requireRole(['admin', 'usuario'])</li>
-                          <li>• <strong>Bcrypt:</strong> Encriptación segura de contraseñas</li>
-                          <li>• <strong>Express-Validator:</strong> Validación y sanitización de datos</li>
-                          <li>• <strong>CORS:</strong> Control de acceso entre orígenes</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">📊 API y Documentación</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>API RESTful:</strong> Endpoints para pilotos, equipos, circuitos, vehículos</li>
-                          <li>• <strong>Swagger UI:</strong> Documentación interactiva automática</li>
-                          <li>• <strong>Sistema de Simulaciones:</strong> Funcionalidad especializada para F1</li>
-                          <li>• <strong>Respuestas Estructuradas:</strong> Códigos de estado consistentes</li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Node.js 18+</span>
-                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Express.js</span>
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">MongoDB</span>
-                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Mongoose</span>
-                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Docker</span>
-                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">JWT</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Swagger</span>
-                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Hexagonal Architecture</span>
-                    </div>
-                  </li>
-                  
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-amber-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">Colombian-Coffee API Backend</div>
-                    <div className="font-medium text-amber-600 dark:text-amber-400 text-sm mt-1">Proyecto de Campus</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Sistema backend completo para gestión de variedades de café colombiano, desarrollado siguiendo Clean Architecture y principios SOLID con PHP 8.x. Me encargué del desarrollo completo del backend implementando una arquitectura modular escalable.
-                    </div>
-                    
-                    <div className="mt-4 space-y-3">
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Implementada</h4>
-                        <p className="text-xs text-gray-600 dark:text-gray-300">
-                          Model → DTO → Repository Domain → Eloquent Repository → Casos de Uso → Controller → Router → Container (Inyección de Dependencias) → index.php
-                        </p>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🔧 Patrones y Tecnologías</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Repository Pattern:</strong> Abstracción de acceso a datos</li>
-                          <li>• <strong>Dependency Injection:</strong> PHP-DI Container</li>
-                          <li>• <strong>Use Cases:</strong> Encapsulación de lógica de negocio</li>
-                          <li>• <strong>DTO Pattern:</strong> Validación con Respect\Validation</li>
-                          <li>• <strong>API RESTful:</strong> Endpoints organizados por módulos</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🛡️ Seguridad y Middleware</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>JWT Authentication:</strong> Autenticación stateless</li>
-                          <li>• <strong>CORS Middleware:</strong> Comunicación frontend-backend</li>
-                          <li>• <strong>Role Middleware:</strong> Control de acceso basado en roles</li>
-                          <li>• <strong>Prepared Statements:</strong> Prevención de inyecciones SQL</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🐳 DevOps y Containerización</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Docker & DevContainer:</strong> Entorno reproducible</li>
-                          <li>• <strong>MySQL 8.4.3:</strong> Base de datos containerizada</li>
-                          <li>• <strong>VS Code Integration:</strong> Desarrollo integrado</li>
-                          <li>• <strong>Composer:</strong> Gestión de dependencias</li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP 8.x</span>
-                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Slim Framework</span>
-                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Eloquent ORM</span>
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">PHP-DI</span>
+                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Node.js</span>
                       <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">MySQL</span>
-                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">JWT</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">PostgreSQL</span>
                       <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Docker</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Clean Architecture</span>
                     </div>
-                  </li>
+                  </div>
                   
-                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-blue-500">
-                    <div className="font-bold text-gray-800 dark:text-white text-base">🏦 Sistema de Cuotas de Manejo - Banco CL</div>
-                    <div className="font-medium text-blue-600 dark:text-blue-400 text-sm mt-1">Proyecto de Campus</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                      Sistema de base de datos completo para gestionar cuotas de manejo de tarjetas bancarias. Implementa lógica financiera compleja con automatización mediante triggers, eventos programados y procedimientos almacenados para diferentes tipos de tarjetas bancarias.
-                    </div>
-                    
-                    <div className="mt-4 space-y-3">
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">💳 Funcionalidades Bancarias</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Gestión de Tarjetas:</strong> Débito, Crédito, Prepago, Empresarial, Nómina, Virtual</li>
-                          <li>• <strong>Cálculo Automático:</strong> Cuotas de manejo con descuentos personalizados</li>
-                          <li>• <strong>Registro de Pagos:</strong> Seguimiento completo de transacciones</li>
-                          <li>• <strong>Reportes Financieros:</strong> Generación automática de reportes</li>
-                          <li>• <strong>Control de Acceso:</strong> Sistema de roles y permisos de usuario</li>
-                        </ul>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <div className="text-center">
+                      <div className="text-sm font-medium text-blue-700 dark:text-blue-300 mb-2">
+                        💼 Proyectos Destacados
                       </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🗄️ Arquitectura de Base de Datos</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>DDL:</strong> Estructura completa de tablas y relaciones</li>
-                          <li>• <strong>DML:</strong> Datos de prueba y casos de uso reales</li>
-                          <li>• <strong>Consultas SELECT:</strong> Queries optimizadas para reportes</li>
-                          <li>• <strong>Modelo Relacional:</strong> Diagrama de entidad-relación completo</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">⚙️ Automatización y Lógica de Negocio</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>Procedimientos Almacenados:</strong> Lógica de negocio encapsulada</li>
-                          <li>• <strong>Funciones Personalizadas:</strong> Cálculos financieros especializados</li>
-                          <li>• <strong>Triggers Automáticos:</strong> Validaciones y actualizaciones en tiempo real</li>
-                          <li>• <strong>Eventos Programados:</strong> Tareas automáticas y mantenimiento</li>
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
-                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🔧 Estructura del Proyecto</h4>
-                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-                          <li>• <strong>ddl.sql:</strong> Creación de tablas y estructura</li>
-                          <li>• <strong>dml.sql:</strong> Datos de prueba y casos de uso</li>
-                          <li>• <strong>dql_select.sql:</strong> Consultas SELECT optimizadas</li>
-                          <li>• <strong>dql_procedimientos.sql:</strong> Stored procedures</li>
-                          <li>• <strong>dql_funciones.sql:</strong> Funciones personalizadas</li>
-                          <li>• <strong>dql_triggers.sql:</strong> Triggers automáticos</li>
-                          <li>• <strong>dql_eventos.sql:</strong> Eventos programados</li>
-                        </ul>
+                      <div className="text-xs text-blue-600 dark:text-blue-400">
+                        Revisa la sección de <strong>Proyectos</strong> para ver detalles técnicos completos de cada desarrollo
                       </div>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">MySQL 8.0+</span>
-                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Stored Procedures</span>
-                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Triggers</span>
-                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Functions</span>
-                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Events</span>
-                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Sistema Financiero</span>
-                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Modelo Relacional</span>
-                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">DDL/DML/DQL</span>
-                    </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
