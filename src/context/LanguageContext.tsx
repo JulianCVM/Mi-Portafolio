@@ -33,7 +33,7 @@ const translations = {
     'about.fullstack': 'Full Stack',
     'about.music': 'Amante de la música',
     'about.intro1': '¡Hola! Soy',
-    'about.intro2': 'tengo 19 años y soy estudiante de Tecnología en Desarrollo de Sistemas Informáticos en las Unidades Tecnológicas de Santander (UTS).',
+    'about.intro2': 'tengo 20 años y soy estudiante de Tecnología en Desarrollo de Sistemas Informáticos en las Unidades Tecnológicas de Santander (UTS).',
     'about.intro3': 'Actualmente también formo parte del programa de formación intensiva en Campuslands, donde he tenido la oportunidad de aplicar mis conocimientos en entornos reales de desarrollo y colaborar activamente como programador dentro de un equipo multidisciplinario.',
     'about.intro4': 'Me apasiona el aprendizaje continuo, la investigación tecnológica y los desafíos que me permiten crecer tanto a nivel técnico como personal.',
     

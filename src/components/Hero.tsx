@@ -484,8 +484,8 @@ export default function Hero() {
               
               {/* Reemplaza esta imagen con tu foto profesional */}
               <Image
-                src="/placeholder-profile.jpg"
-                alt="Tu Nombre"
+                src="/foto-perfil.jpeg"
+                alt="Julian - Programador Full Stack"
                 fill
                 style={{ objectFit: 'cover' }}
                 priority
