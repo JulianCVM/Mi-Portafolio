@@ -12,7 +12,7 @@
   <!-- Diseño minimalista con iniciales y símbolo de código -->
   <g fill="#ffffff">
     <!-- Letra J estilizada -->
-    <path d="M25 25 L25 45 Q25 55 35 55 Q45 55 45 45 L45 35" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M25 25 L45 25 M35 25 L35 45 Q35 55 25 55 Q15 55 15 45" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
     
     <!-- Letra V estilizada -->
     <path d="M55 25 L65 55 L75 25" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
