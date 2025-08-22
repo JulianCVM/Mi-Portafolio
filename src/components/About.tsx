@@ -449,6 +449,69 @@ export default function About() {
                     </div>
                   </li>
                   
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-green-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">🏁 Fórmula 1 - Backend API</div>
+                    <div className="font-medium text-green-600 dark:text-green-400 text-sm mt-1">Proyecto Campus</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      API REST completa para gestión integral de datos de Fórmula 1, desarrollada con Node.js, Express y MongoDB. Implementa arquitectura hexagonal (Clean Architecture) con configuración completa en Docker y documentación automática con Swagger.
+                    </div>
+                    
+                    <div className="mt-4 space-y-3">
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🏗️ Arquitectura Hexagonal</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>DDD (Domain-Driven Design):</strong> Módulos funcionales independientes</li>
+                          <li>• <strong>Separación de Capas:</strong> Controller → Service → Repository → Models</li>
+                          <li>• <strong>Módulos Especializados:</strong> Auth, Circuitos, Equipos, Pilotos, Simulación</li>
+                          <li>• <strong>Shared Components:</strong> Respuestas HTTP y utilidades comunes</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🐳 DevOps y Containerización</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Docker Compose:</strong> Orquestación de servicios (App + MongoDB)</li>
+                          <li>• <strong>Hot Reload:</strong> Desarrollo con nodemon y recarga automática</li>
+                          <li>• <strong>Health Checks:</strong> Monitoreo automático de MongoDB</li>
+                          <li>• <strong>Persistencia:</strong> Volúmenes para datos permanentes</li>
+                          <li>• <strong>Networking:</strong> Comunicación interna entre contenedores</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🛡️ Seguridad y Autenticación</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>JWT Authentication:</strong> Tokens seguros con expiración</li>
+                          <li>• <strong>Autorización por Roles:</strong> Middleware requireRole(['admin', 'usuario'])</li>
+                          <li>• <strong>Bcrypt:</strong> Encriptación segura de contraseñas</li>
+                          <li>• <strong>Express-Validator:</strong> Validación y sanitización de datos</li>
+                          <li>• <strong>CORS:</strong> Control de acceso entre orígenes</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">📊 API y Documentación</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>API RESTful:</strong> Endpoints para pilotos, equipos, circuitos, vehículos</li>
+                          <li>• <strong>Swagger UI:</strong> Documentación interactiva automática</li>
+                          <li>• <strong>Sistema de Simulaciones:</strong> Funcionalidad especializada para F1</li>
+                          <li>• <strong>Respuestas Estructuradas:</strong> Códigos de estado consistentes</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Node.js 18+</span>
+                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Express.js</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">MongoDB</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Mongoose</span>
+                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Docker</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">JWT</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Swagger</span>
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Hexagonal Architecture</span>
+                    </div>
+                  </li>
+                  
                   <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-amber-500">
                     <div className="font-bold text-gray-800 dark:text-white text-base">Colombian-Coffee API Backend</div>
                     <div className="font-medium text-amber-600 dark:text-amber-400 text-sm mt-1">Proyecto de Campus</div>
@@ -505,6 +568,71 @@ export default function About() {
                       <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">JWT</span>
                       <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Docker</span>
                       <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Clean Architecture</span>
+                    </div>
+                  </li>
+                  
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-blue-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">🏦 Sistema de Cuotas de Manejo - Banco CL</div>
+                    <div className="font-medium text-blue-600 dark:text-blue-400 text-sm mt-1">Proyecto de Campus</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      Sistema de base de datos completo para gestionar cuotas de manejo de tarjetas bancarias. Implementa lógica financiera compleja con automatización mediante triggers, eventos programados y procedimientos almacenados para diferentes tipos de tarjetas bancarias.
+                    </div>
+                    
+                    <div className="mt-4 space-y-3">
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">💳 Funcionalidades Bancarias</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Gestión de Tarjetas:</strong> Débito, Crédito, Prepago, Empresarial, Nómina, Virtual</li>
+                          <li>• <strong>Cálculo Automático:</strong> Cuotas de manejo con descuentos personalizados</li>
+                          <li>• <strong>Registro de Pagos:</strong> Seguimiento completo de transacciones</li>
+                          <li>• <strong>Reportes Financieros:</strong> Generación automática de reportes</li>
+                          <li>• <strong>Control de Acceso:</strong> Sistema de roles y permisos de usuario</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🗄️ Arquitectura de Base de Datos</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>DDL:</strong> Estructura completa de tablas y relaciones</li>
+                          <li>• <strong>DML:</strong> Datos de prueba y casos de uso reales</li>
+                          <li>• <strong>Consultas SELECT:</strong> Queries optimizadas para reportes</li>
+                          <li>• <strong>Modelo Relacional:</strong> Diagrama de entidad-relación completo</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">⚙️ Automatización y Lógica de Negocio</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>Procedimientos Almacenados:</strong> Lógica de negocio encapsulada</li>
+                          <li>• <strong>Funciones Personalizadas:</strong> Cálculos financieros especializados</li>
+                          <li>• <strong>Triggers Automáticos:</strong> Validaciones y actualizaciones en tiempo real</li>
+                          <li>• <strong>Eventos Programados:</strong> Tareas automáticas y mantenimiento</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-white dark:bg-gray-600 p-3 rounded-lg">
+                        <h4 className="font-semibold text-gray-800 dark:text-white text-sm mb-2">🔧 Estructura del Proyecto</h4>
+                        <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                          <li>• <strong>ddl.sql:</strong> Creación de tablas y estructura</li>
+                          <li>• <strong>dml.sql:</strong> Datos de prueba y casos de uso</li>
+                          <li>• <strong>dql_select.sql:</strong> Consultas SELECT optimizadas</li>
+                          <li>• <strong>dql_procedimientos.sql:</strong> Stored procedures</li>
+                          <li>• <strong>dql_funciones.sql:</strong> Funciones personalizadas</li>
+                          <li>• <strong>dql_triggers.sql:</strong> Triggers automáticos</li>
+                          <li>• <strong>dql_eventos.sql:</strong> Eventos programados</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">MySQL 8.0+</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Stored Procedures</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Triggers</span>
+                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">Functions</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Events</span>
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Sistema Financiero</span>
+                      <span className="px-2 py-1 bg-cyan-200 dark:bg-cyan-800 text-cyan-800 dark:text-cyan-200 text-xs rounded-full">Modelo Relacional</span>
+                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">DDL/DML/DQL</span>
                     </div>
                   </li>
                 </ul>
