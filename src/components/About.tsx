@@ -45,9 +45,9 @@ export default function About() {
                     
                     <div className="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
                       <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 p-2 rounded-full flex-shrink-0">
-                        <FaMusic className="h-4 w-4" />
+                        <FaCode className="h-4 w-4" />
                       </span>
-                      <div className="text-sm font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
+                      <div className="text-sm font-semibold text-gray-800 dark:text-white">Backend Developer</div>
                 </div>
               </div>
             </div>
@@ -328,11 +328,15 @@ export default function About() {
             <div className="p-4 sm:p-6">
               <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 sm:p-5">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                  Soy una persona con gran capacidad de adaptabilidad, comunicación efectiva y una visión analítica que me permite entender y resolver problemas desde diferentes perspectivas. Me interesa profundamente el desarrollo full stack, con una proyección clara hacia el liderazgo técnico y la gestión de proyectos tecnológicos, áreas en las que aspiro consolidar mi carrera como futuro ingeniero de sistemas.
+                  ¡Hola! Soy estudiante de Tecnología en Desarrollo de Sistemas y me apasiona resolver problemas complejos con código. Me adapto súper rápido a nuevos desafíos y siempre estoy buscando la forma más creativa de hacer que las cosas funcionen mejor.
                 </p>
                 
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg mt-3 sm:mt-4">
-                  Más allá del mundo del código, me encanta la música clásica, ya que me ayuda a concentrarme y mantenerme enfocado. Siempre estoy en búsqueda de nuevas tecnologías que pueda aprender y aplicar para crear soluciones reales que impacten positivamente.
+                  Me especializo en desarrollo backend: me encanta trabajar con <strong>Docker y Kubernetes</strong> para containerización, manejar bases de datos como <strong>MySQL y PostgreSQL</strong>, y construir aplicaciones robustas con <strong>Spring Boot, Laravel y .NET</strong>. Soy de esos que aprende tecnologías nuevas casi por hobby y siempre está experimentando con herramientas que puedan optimizar cualquier proceso.
+                </p>
+
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg mt-3 sm:mt-4">
+                  Siempre estoy investigando alguna nueva tecnología que me llame la atención. Mi objetivo es crear soluciones que realmente marquen la diferencia y aporten valor real a los proyectos en los que trabajo.
                 </p>
               </div>
             </div>
