@@ -22,62 +22,51 @@ export default function About() {
         {/* Diseño tipo dashboard con grid - mejorada la distribución */}
         <div className="max-w-6xl mx-auto">
           
-          {/* Fila principal - Perfil e introducción */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 mb-8">
-            {/* Tarjeta de perfil */}
-            <div className="lg:col-span-4">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                <div className="p-4 sm:p-5">
-                  <div className="aspect-square rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 mb-4 sm:mb-5 shadow-md">
-                    <img 
-                      src="/placeholder-profile.jpg"
-                      alt="Julián Villamizar" 
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  
+          {/* Tarjeta de introducción - Ahora ocupa todo el ancho */}
+          <div className="mb-8">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+                {/* Información básica compacta */}
+                <div className="lg:col-span-1">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
+                    <div className="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
                       <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-2 rounded-full flex-shrink-0">
-                        <FaGraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+                        <FaGraduationCap className="h-4 w-4" />
                       </span>
-                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.student')}</div>
+                      <div className="text-sm font-semibold text-gray-800 dark:text-white">{t('about.student')}</div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
+                    <div className="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
                       <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 p-2 rounded-full flex-shrink-0">
-                        <FaBriefcase className="h-4 w-4 sm:h-5 sm:w-5" />
+                        <FaBriefcase className="h-4 w-4" />
                       </span>
-                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.fullstack')}</div>
+                      <div className="text-sm font-semibold text-gray-800 dark:text-white">{t('about.fullstack')}</div>
                     </div>
                     
-                    <div className="flex items-center gap-3 p-3 bg-gray-200/70 dark:bg-gray-700 rounded-lg shadow-sm">
+                    <div className="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
                       <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 p-2 rounded-full flex-shrink-0">
-                        <FaMusic className="h-4 w-4 sm:h-5 sm:w-5" />
+                        <FaMusic className="h-4 w-4" />
                       </span>
-                      <div className="text-sm sm:text-base font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
+                      <div className="text-sm font-semibold text-gray-800 dark:text-white">{t('about.music')}</div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            {/* Tarjeta de introducción */}
-            <div className="lg:col-span-8">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg h-full flex flex-col justify-center p-4 sm:p-6 lg:p-8">
-                <div className="space-y-4 sm:space-y-5">
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                    {t('about.intro1')} <span className="font-bold text-green-600 dark:text-green-400">Julián Villamizar</span>, {t('about.intro2')}
-                  </p>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                    {t('about.intro3')}
-                  </p>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                    {t('about.intro4')}
-                  </p>
+                
+                {/* Texto de introducción */}
+                <div className="lg:col-span-3">
+                  <div className="space-y-4">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                      {t('about.intro1')} <span className="font-bold text-green-600 dark:text-green-400">Julián Villamizar</span>, {t('about.intro2')}
+                    </p>
+                    
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                      {t('about.intro3')}
+                    </p>
+                    
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+                      {t('about.intro4')}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,16 +353,51 @@ export default function About() {
                 </h3>
               </div>
               <div className="p-3 sm:p-5">
-                <ul className="space-y-3">
-                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
-                    <div className="font-medium text-gray-800 dark:text-white">Desarrollador - Solvo Global</div>
+                <ul className="space-y-4">
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-green-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">Practicante - Programador</div>
+                    <div className="font-medium text-green-600 dark:text-green-400 text-sm mt-1">SOLVO S.A.S - Campuslands</div>
                     <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Enero 2024 - Presente</div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-2">Trabajo como desarrollador en una célula de desarrollo, aplicando conocimientos técnicos en proyectos reales.</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      Colaboré en el diseño y desarrollo de módulos de software dentro de equipos ágiles, utilizando Git para control de versiones. Contribuí al diseño de arquitectura backend con Node.js, TypeScript y Prisma ORM, aplicando mejores prácticas y optimizaciones de rendimiento. Participé activamente en múltiples proyectos, apoyando el desarrollo, pruebas y mejoras de rendimiento para garantizar calidad y confiabilidad.
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Node.js</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">TypeScript</span>
+                      <span className="px-2 py-1 bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-200 text-xs rounded-full">Prisma ORM</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Git</span>
+                    </div>
                   </li>
-                  <li className="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
-                    <div className="font-medium text-gray-800 dark:text-white">Proyecto Académico</div>
-                    <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mt-1">Prototipo de Aplicación Móvil</div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-2">Desarrollo de un prototipo de aplicación móvil como proyecto de grado.</div>
+                  
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-blue-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">Sistema de Agente Inteligente con LLM Personalizado</div>
+                    <div className="font-medium text-blue-600 dark:text-blue-400 text-sm mt-1">Universidad</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      Desarrollo de un sistema modular en Java usando Spring Boot para integrar modelos de lenguaje personalizados (LLMs) para procesamiento de tareas y aprendizaje. Implementé controladores REST, lógica de negocio, persistencia y optimicé el flujo de trabajo entre capas.
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Java</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Spring Boot</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">HTML</span>
+                      <span className="px-2 py-1 bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 text-xs rounded-full">JavaScript</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">Python</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">CSS</span>
+                    </div>
+                  </li>
+                  
+                  <li className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-purple-500">
+                    <div className="font-bold text-gray-800 dark:text-white text-base">Dashboard GeoApp</div>
+                    <div className="font-medium text-purple-600 dark:text-purple-400 text-sm mt-1">Proyecto de grado universitario</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+                      Desarrollé un dashboard de administración para la aplicación móvil GeoApp, diseñado para gestionar centralmente reportes georreferenciados, usuarios y logros. Facilita el monitoreo de la actividad de la aplicación, gestión de usuarios y logros, y toma de decisiones basada en datos. Combina eficiencia, interactividad y análisis de datos espaciales.
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      <span className="px-2 py-1 bg-red-200 dark:bg-red-800 text-red-800 dark:text-red-200 text-xs rounded-full">Laravel</span>
+                      <span className="px-2 py-1 bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs rounded-full">PHP</span>
+                      <span className="px-2 py-1 bg-blue-200 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs rounded-full">PostgreSQL</span>
+                      <span className="px-2 py-1 bg-green-200 dark:bg-green-800 text-green-800 dark:text-green-200 text-xs rounded-full">Supabase</span>
+                      <span className="px-2 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs rounded-full">Blade</span>
+                    </div>
                   </li>
                 </ul>
               </div>
