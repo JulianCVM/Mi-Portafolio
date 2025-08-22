@@ -10,8 +10,18 @@ import AppWrapper from '@/components/AppWrapper'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Mi Portafolio Profesional',
-  description: 'Portafolio profesional mostrando mis proyectos y habilidades',
+  title: 'Julián Villamizar - Desarrollador Backend',
+  description: 'Portafolio profesional de Julián Villamizar, desarrollador backend especializado en PHP, Java, Node.js y arquitecturas avanzadas',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
