@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Syne, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -7,7 +7,17 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import { LanguageProvider } from '@/context/LanguageContext'
 import AppWrapper from '@/components/AppWrapper'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const syne = Syne({ 
+  subsets: ['latin'], 
+  weight: ['700', '800'],
+  variable: '--font-syne' 
+})
+
+const jetBrainsMono = JetBrains_Mono({ 
+  subsets: ['latin'], 
+  weight: ['400', '500'],
+  variable: '--font-jetbrains' 
+})
 
 export const metadata: Metadata = {
   title: 'Julián Villamizar - Desarrollador Backend',
@@ -31,12 +41,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col transition-colors duration-300`}>
+      <body className={`${jetBrainsMono.variable} ${syne.variable} font-sans bg-bg text-text min-h-screen flex flex-col`}>
         <ThemeProvider>
           <LanguageProvider>
             <AppWrapper>
               <Header />
-              <main className="flex-grow">
+              <main className="flex-grow flex flex-col">
                 {children}
               </main>
               <Footer />
@@ -46,4 +56,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

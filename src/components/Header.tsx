@@ -4,138 +4,99 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [scrollProgress, setScrollProgress] = useState(0)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY)
-      
-      // Calcular el progreso del scroll para toda la página
-      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const progress = (window.scrollY / totalHeight) * 100
-      setScrollProgress(progress)
+      setIsScrolled(window.scrollY > 50)
+
+      // Active section highlighting
+      const sections = ['home', 'about', 'skills', 'projects', 'contact']
+      let current = ''
+      sections.forEach((sec) => {
+        const el = document.getElementById(sec)
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top <= 200 && rect.bottom >= 200) {
+            current = sec
+          }
+        }
+      })
+      if (current) setActiveSection(current)
     }
 
     window.addEventListener('scroll', handleScroll)
+    // Trigger once on load
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const navLinks = [
+    { name: 'Main.java', href: '#home', id: 'home' },
+    { name: 'Developer.java', href: '#about', id: 'about' },
+    { name: 'ProjectService.java', href: '#projects', id: 'projects' },
+    { name: 'SkillMatrix.java', href: '#skills', id: 'skills' },
+    { name: 'ContactController.java', href: '#contact', id: 'contact' },
+  ]
+
   return (
-    <header className="bg-white dark:bg-secondary shadow-sm sticky top-0 z-50 relative overflow-hidden">
-      {/* Elementos animados de fondo */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mr-20 -mt-20 transform animate-float"
-          style={{
-            animation: 'float 15s infinite ease-in-out',
-            animationDelay: '0s'
-          }}
-        ></div>
-        <div 
-          className="absolute bottom-0 left-1/4 w-40 h-40 bg-blue-400 opacity-5 rounded-full transform"
-          style={{
-            animation: 'float 12s infinite ease-in-out',
-            animationDelay: '2s'
-          }}
-        ></div>
-        <div 
-          className="absolute top-1/3 right-1/3 w-24 h-24 bg-purple-500 opacity-5 rounded-full transform"
-          style={{
-            animation: 'float 10s infinite ease-in-out',
-            animationDelay: '1s'
-          }}
-        ></div>
+    <nav className={`fixed top-0 left-0 right-0 h-[60px] bg-bg/85 backdrop-blur-md z-[100] border-b transition-colors duration-300 ${isScrolled ? 'border-orange' : 'border-transparent'}`}>
+      <div className="container-custom h-full flex items-center justify-between">
+        <Link href="#home" className="flex items-center gap-2 font-medium text-text no-underline">
+          <span className="text-orange font-bold tracking-tighter">○──○</span>
+          <span>portfolio.dev</span>
+        </Link>
         
-        {/* Barra de progreso para toda la página */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-700">
-          <div 
-            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600"
-            style={{
-              width: `${scrollProgress}%`,
-              transition: 'width 0.3s ease-out'
-            }}
-          ></div>
-        </div>
-      </div>
+        <ul className="hidden md:flex gap-8 list-none m-0 p-0 text-sm">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link 
+                href={link.href} 
+                className={`text-muted no-underline relative inline-flex items-center gap-2 transition-colors duration-300 group ${activeSection === link.id ? 'text-text' : 'hover:text-text'}`}
+              >
+                <span className={`w-1.5 h-1.5 rounded-full bg-orange transition-opacity duration-300 ${activeSection === link.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></span>
+                {link.name}
+                <span className={`absolute -bottom-1 left-0 h-[1px] bg-orange transition-all duration-300 ${activeSection === link.id ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-      <div className="container-custom py-4 relative z-10">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-primary">
-            Mi Portafolio
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link href="#about" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-              Sobre mí
-            </Link>
-            <Link href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-              Habilidades
-            </Link>
-            <Link href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-              Proyectos
-            </Link>
-            <Link href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-              Contacto
-            </Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg 
-              className="h-6 w-6" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden text-muted hover:text-text focus:outline-none"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {isMobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-2 space-y-3">
-            <Link 
-              href="#about" 
-              className="block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Sobre mí
-            </Link>
-            <Link 
-              href="#skills" 
-              className="block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Habilidades
-            </Link>
-            <Link 
-              href="#projects" 
-              className="block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Proyectos
-            </Link>
-            <Link 
-              href="#contact" 
-              className="block text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contacto
-            </Link>
-          </nav>
+        {isMobileMenuOpen && (
+          <div className="absolute top-[60px] left-0 right-0 bg-bg border-b border-border md:hidden">
+            <ul className="flex flex-col p-4 gap-4 m-0">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block text-muted no-underline ${activeSection === link.id ? 'text-text' : 'hover:text-text'}`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
-    </header>
+    </nav>
   )
-} 
+}
