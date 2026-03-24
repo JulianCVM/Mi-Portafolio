@@ -9,11 +9,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2E7D32',
-        secondary: '#1A2E1A',
-        accent: '#E8F5E9',
-        'primary-light': '#4CAF50',
-        'primary-dark': '#1B5E20',
+        jp: {
+          red: '#c92222',
+          darkred: '#901e1e',
+          black: '#111111',
+          bg: '#f8f8f8',
+          gray: '#e5e5e5',
+          lightgray: '#f0f0f0',
+        }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

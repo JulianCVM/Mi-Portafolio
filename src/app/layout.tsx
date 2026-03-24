@@ -6,6 +6,8 @@ import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { LanguageProvider } from '@/context/LanguageContext'
 import AppWrapper from '@/components/AppWrapper'
+import CursorTrail from '@/components/CursorTrail'
+import ThreeBackground from '@/components/ThreeBackground'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -31,7 +33,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col transition-colors duration-300`}>
+      <body className={`${inter.className} bg-jp-bg text-jp-black min-h-screen flex flex-col transition-colors duration-300 relative`}>
+        <ThreeBackground />
+        <CursorTrail />
         <ThemeProvider>
           <LanguageProvider>
             <AppWrapper>

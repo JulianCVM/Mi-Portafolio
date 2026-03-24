@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 17, 17, 17;
+  --background-rgb: 248, 248, 248;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-rgb: 26, 46, 26;
+    --background-rgb: 17, 17, 17;
   }
 }
 
@@ -20,7 +20,9 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background-color: rgb(var(--background-rgb));
+  background-image: radial-gradient(#d5d5d5 2px, transparent 2px);
+  background-size: 30px 30px;
 }
 
 /* Estilo para la barra de desplazamiento */
