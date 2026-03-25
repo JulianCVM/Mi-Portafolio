@@ -3,8 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: 255 255 255;
+    --color-bg-card: 243 244 246;
+    --color-grid-line: 229 231 235;
+    --color-orange: 248 152 32;
+    --color-blue: 0 136 204;
+    --color-green: 34 139 34;
+    --color-text: 31 41 55;
+    --color-muted: 107 114 128;
+    --color-border: 209 213 219;
+    --color-syntax-keyword: 9 134 88;
+    --color-syntax-string: 163 21 21;
+    --color-syntax-comment: 0 128 0;
+    --color-syntax-field: 0 16 128;
+    --color-syntax-type: 38 127 153;
+    --color-blueprint-lines: rgba(0, 0, 0, 0.05);
+  }
+
+  .dark {
+    --color-bg: 5 10 24;
+    --color-bg-card: 8 15 34;
+    --color-grid-line: 10 24 48;
+    --color-orange: 248 152 32;
+    --color-blue: 0 212 255;
+    --color-green: 57 255 20;
+    --color-text: 232 237 245;
+    --color-muted: 74 85 104;
+    --color-border: 17 34 64;
+    --color-syntax-keyword: 0 212 255;
+    --color-syntax-string: 206 145 120;
+    --color-syntax-comment: 106 153 85;
+    --color-syntax-field: 232 237 245;
+    --color-syntax-type: 248 152 32;
+    --color-blueprint-lines: rgba(255, 255, 255, 0.03);
+  }
+
   body {
-    @apply bg-bg text-text font-sans relative overflow-x-hidden;
+    @apply bg-bg text-text font-sans relative overflow-x-hidden transition-colors duration-300;
   }
 }
 
@@ -44,7 +80,10 @@
     @apply bg-transparent text-blue border border-blue;
   }
   .btn-outline:hover {
-    @apply shadow-[0_0_15px_rgba(0,212,255,0.4)] bg-blue/10;
+    /* bg-blue/10 equivalent */
+    background-color: color-mix(in srgb, rgb(var(--color-blue)) 10%, transparent);
+    /* shadow-[0_0_15px_rgba(0,212,255,0.4)] equivalent */
+    box-shadow: 0 0 15px color-mix(in srgb, rgb(var(--color-blue)) 40%, transparent);
   }
   
   .section-title {
@@ -70,8 +109,8 @@ body::after {
   top: 0; left: 0; right: 0; bottom: 0;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.03) 0px,
-    rgba(255, 255, 255, 0.03) 1px,
+    var(--color-blueprint-lines) 0px,
+    var(--color-blueprint-lines) 1px,
     transparent 1px,
     transparent 2px
   );

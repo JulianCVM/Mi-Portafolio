@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,8 +47,8 @@ export default function Contact() {
         <div className="flex flex-col gap-6">
           <div className="card !p-0 overflow-hidden">
             <div className="bg-muted/10 p-3 border-b border-border text-sm font-sans flex justify-between">
-              <span>Headers</span>
-              <span className="text-muted">3 items</span>
+              <span>{t('contact.headers')}</span>
+              <span className="text-muted">{t('contact.items')}</span>
             </div>
             <div className="p-4 text-sm font-sans flex flex-col gap-2">
               <div className="flex"><span className="w-24 text-blue">Host:</span><span className="text-text">portfolio.julian.dev</span></div>
@@ -57,7 +59,7 @@ export default function Contact() {
           
           <div className="card !p-0 overflow-hidden">
             <div className="bg-muted/10 p-3 border-b border-border text-sm font-sans">
-              Contact Information
+              {t('contact.info')}
             </div>
             <div className="p-4 text-sm font-sans flex flex-col gap-4">
               <a href="mailto:juliancamilovm22@gmail.com" className="flex items-center gap-3 text-text hover:text-orange transition-colors">
@@ -106,7 +108,7 @@ export default function Contact() {
                   onChange={handleChange} 
                   required 
                   className="bg-bg-card border border-border px-3 py-1.5 w-full focus:outline-none focus:border-orange text-string placeholder:text-muted/50 rounded-sm"
-                  placeholder='"Tu nombre completo"'
+                  placeholder={`"${t('contact.form.name')}"`}
                 />
                 <span className="text-muted hidden md:inline">,</span>
               </div>
@@ -120,7 +122,7 @@ export default function Contact() {
                   onChange={handleChange} 
                   required 
                   className="bg-bg-card border border-border px-3 py-1.5 w-full focus:outline-none focus:border-orange text-string placeholder:text-muted/50 rounded-sm"
-                  placeholder='"tu@email.com"'
+                  placeholder={`"${t('contact.form.email')}"`}
                 />
                 <span className="text-muted hidden md:inline">,</span>
               </div>
@@ -134,7 +136,7 @@ export default function Contact() {
                   onChange={handleChange} 
                   required 
                   className="bg-bg-card border border-border px-3 py-1.5 w-full focus:outline-none focus:border-orange text-string placeholder:text-muted/50 rounded-sm"
-                  placeholder='"Motivo de contacto"'
+                  placeholder={`"${t('contact.form.subject')}"`}
                 />
                 <span className="text-muted hidden md:inline">,</span>
               </div>
@@ -148,7 +150,7 @@ export default function Contact() {
                   required 
                   rows={4}
                   className="bg-bg-card border border-border px-3 py-1.5 w-full focus:outline-none focus:border-orange text-string placeholder:text-muted/50 rounded-sm resize-none"
-                  placeholder='"Mensaje detallado..."'
+                  placeholder={`"${t('contact.form.message')}"`}
                 ></textarea>
               </div>
             </div>
@@ -158,9 +160,9 @@ export default function Contact() {
             <div className="mt-8 flex items-center justify-between border-t border-border pt-4">
               <div className="flex items-center gap-3">
                 {responseStatus === 200 && (
-                  <span className="text-green text-sm flex items-center gap-2 animate-[pulseGlow_2s_ease-in-out]">
+                  <span className="text-green text-sm flex items-center gap-2 animate-pulse-glow">
                     <span className="w-2 h-2 rounded-full bg-green"></span>
-                    200 OK: Message delivered
+                    {t('contact.delivered')}
                   </span>
                 )}
               </div>
@@ -169,7 +171,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 className="btn btn-solid flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending...' : 'Send Request ▶'}
+                {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
               </button>
             </div>
           </form>

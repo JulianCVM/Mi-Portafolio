@@ -1,34 +1,43 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
   const [typedLines, setTypedLines] = useState<string[]>([])
   
   const codeLines = [
     '<span class="keyword">public class</span> <span class="type">Developer</span> {',
     '  <span class="text-text">name</span> = <span class="string">"Julián Villamizar"</span>;',
-    '  <span class="text-text">role</span> = <span class="string">"Backend Engineer"</span>;',
-    '  <span class="text-text">status</span> = <span class="string">"Available for hire"</span>;',
+    `  <span class="text-text">role</span> = <span class="string">"${t('hero.role')}"</span>;`,
+    `  <span class="text-text">status</span> = <span class="string">"${t('hero.cta')}"</span>;`,
     '}'
   ]
 
   useEffect(() => {
-    let currentLine = 0
-    const interval = setInterval(() => {
-      if (currentLine < codeLines.length) {
-        setTypedLines(prev => [...prev, codeLines[currentLine]])
-        currentLine++
-      } else {
-        clearInterval(interval)
-      }
-    }, 400)
+    setTypedLines([]) // reset when language changes
+    let timeoutIds: NodeJS.Timeout[] = []
     
-    return () => clearInterval(interval)
-  }, [])
+    codeLines.forEach((line, index) => {
+      const id = setTimeout(() => {
+        setTypedLines(prev => {
+          if (prev.length === index) {
+            return [...prev, line]
+          }
+          return prev
+        })
+      }, 400 * (index + 1))
+      timeoutIds.push(id)
+    })
+    
+    return () => {
+      timeoutIds.forEach(clearTimeout)
+    }
+  }, [t])
 
   return (
-    <section id="home" className="min-h-screen pt-[100px] pb-[60px] flex flex-col justify-center opacity-0 animate-[sectionFadeIn_0.8s_forwards] container-custom">
+    <section id="home" className="min-h-screen pt-[100px] pb-[60px] flex flex-col justify-center opacity-0 animate-section-fade container-custom">
       <div className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-8 items-center w-full">
         <div className="flex flex-col">
           <div className="text-[clamp(1.2rem,2.5vw,2.5rem)] leading-relaxed font-sans font-medium bg-bg/50 backdrop-blur-sm p-4 rounded-md">
@@ -37,7 +46,7 @@ export default function Hero() {
                 <span className="text-muted w-12 shrink-0 select-none">{i + 1}</span>
                 <span dangerouslySetInnerHTML={{ __html: line }} />
                 {i === typedLines.length - 1 && i === codeLines.length - 1 && (
-                  <span className="inline-block w-[10px] h-[1.1em] bg-text align-bottom animate-[blink_1s_step-end_infinite] ml-1"></span>
+                  <span className="inline-block w-[10px] h-[1.1em] bg-text align-bottom animate-blink ml-1"></span>
                 )}
                 {i === typedLines.length - 1 && i < codeLines.length - 1 && (
                   <span className="inline-block w-[10px] h-[1.1em] bg-text align-bottom ml-1"></span>
@@ -47,13 +56,13 @@ export default function Hero() {
             {typedLines.length === 0 && (
                 <div className="flex mb-1">
                    <span className="text-muted w-12 shrink-0 select-none">1</span>
-                   <span className="inline-block w-[10px] h-[1.1em] bg-text align-bottom animate-[blink_1s_step-end_infinite] ml-1"></span>
+                   <span className="inline-block w-[10px] h-[1.1em] bg-text align-bottom animate-blink ml-1"></span>
                 </div>
             )}
           </div>
           <div className="mt-12 flex flex-wrap gap-4 relative z-10">
-            <a href="#projects" className="btn btn-solid animate-[pulseGlow_2s_infinite_ease-in-out]">▶ Run Portfolio</a>
-            <a href="https://github.com/JulianCVM" target="_blank" rel="noopener noreferrer" className="btn btn-outline">git clone projects</a>
+            <a href="#projects" className="btn btn-solid animate-pulse-glow">▶ Run {t('nav.projects')}</a>
+            <a href="#contact" className="btn btn-outline">{t('hero.cta')}</a>
           </div>
         </div>
         
@@ -66,7 +75,7 @@ export default function Hero() {
             <div>│</div>
             <div>▼</div>
           </div>
-          <div className="card w-fit !p-3 border-t-2 border-t-blue animate-[pulseGlowBlue_2s_infinite_ease-in-out]">
+          <div className="card w-fit !p-3 border-t-2 border-t-blue animate-pulse-glow-blue">
             <span className="keyword">[Portfolio.App]</span>
           </div>
           
@@ -83,9 +92,9 @@ export default function Hero() {
           </div>
           
           <div className="flex gap-4 w-full justify-between">
-            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[About]</div>
-            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[Projects]</div>
-            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[Skills]</div>
+            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[{t('nav.about')}]</div>
+            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[{t('nav.projects')}]</div>
+            <div className="card w-full text-center !p-2 text-xs !border-border hover:!border-orange transition-colors">[{t('nav.skills')}]</div>
           </div>
         </div>
       </div>

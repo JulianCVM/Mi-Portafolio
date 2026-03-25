@@ -9,20 +9,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: '#050A18',
-        'bg-card': '#080F22',
-        'grid-line': '#0A1830',
-        orange: '#F89820',
-        blue: '#00D4FF',
-        green: '#39FF14',
-        text: '#E8EDF5',
-        muted: '#4A5568',
-        border: '#112240',
-        'syntax-keyword': '#00D4FF',
-        'syntax-string': '#CE9178',
-        'syntax-comment': '#6A9955',
-        'syntax-field': '#E8EDF5',
-        'syntax-type': '#F89820',
+        bg: 'rgb(var(--color-bg) / <alpha-value>)',
+        'bg-card': 'rgb(var(--color-bg-card) / <alpha-value>)',
+        'grid-line': 'rgb(var(--color-grid-line) / <alpha-value>)',
+        orange: 'rgb(var(--color-orange) / <alpha-value>)',
+        blue: 'rgb(var(--color-blue) / <alpha-value>)',
+        green: 'rgb(var(--color-green) / <alpha-value>)',
+        text: 'rgb(var(--color-text) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        'syntax-keyword': 'rgb(var(--color-syntax-keyword) / <alpha-value>)',
+        'syntax-string': 'rgb(var(--color-syntax-string) / <alpha-value>)',
+        'syntax-comment': 'rgb(var(--color-syntax-comment) / <alpha-value>)',
+        'syntax-field': 'rgb(var(--color-syntax-field) / <alpha-value>)',
+        'syntax-type': 'rgb(var(--color-syntax-type) / <alpha-value>)',
+        primary: {
+          DEFAULT: 'rgb(var(--color-orange) / <alpha-value>)',
+          dark: '#E08000',
+        }
       },
       fontFamily: {
         sans: ['JetBrains Mono', 'monospace'],

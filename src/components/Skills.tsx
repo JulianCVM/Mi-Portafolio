@@ -65,28 +65,27 @@ export default function Skills() {
           {/* Dots */}
           {/* Adopt (Orange) */}
           <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[35%] left-[65%] before:content-['Spring_Boot'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
-          <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[45%] left-[35%] before:content-['PHP/Laravel'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[45%] left-[35%] before:content-['TypeScript/Node'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
           <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[65%] left-[40%] before:content-['PostgreSQL'] before:absolute before:-left-20 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
-          <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[30%] left-[45%] before:content-['Node.js'] before:absolute before:-left-16 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-orange shadow-[0_0_10px_var(--orange)] -translate-x-1/2 -translate-y-1/2 top-[30%] left-[45%] before:content-['Vibecoding'] before:absolute before:-left-16 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
           
           {/* Trial (Blue) */}
-          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[75%] left-[65%] before:content-['.NET_Core'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
-          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[80%] left-[40%] before:content-['Docker'] before:absolute before:-left-12 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
-          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[25%] left-[75%] before:content-['React/Next'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[75%] left-[65%] before:content-['Linux'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[80%] left-[40%] before:content-['Docker/GCP'] before:absolute before:-left-12 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
+          <div className="absolute w-2.5 h-2.5 rounded-full bg-blue shadow-[0_0_10px_var(--blue)] -translate-x-1/2 -translate-y-1/2 top-[25%] left-[75%] before:content-['Prompt_Eng'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
           
           {/* Assess/Hold (Muted) */}
           <div className="absolute w-2.5 h-2.5 rounded-full bg-muted -translate-x-1/2 -translate-y-1/2 top-[15%] left-[20%] before:content-['Kubernetes'] before:absolute before:-left-20 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
           <div className="absolute w-2.5 h-2.5 rounded-full bg-muted -translate-x-1/2 -translate-y-1/2 top-[85%] left-[15%] before:content-['Python'] before:absolute before:left-3.5 before:-top-1 before:text-[0.7rem] before:whitespace-nowrap before:text-text"></div>
         </div>
         
-        {/* Terminal Progress Bars */}
         <div className="flex flex-col gap-8 font-sans">
           <div>
             <div className="text-muted text-sm mb-4">▼ Backend Core</div>
             
             <div className="mb-4">
               <div className="flex justify-between text-sm mb-1">
-                <span>Java / Spring Boot</span>
+                <span>Java / Spring Architecture</span>
                 <span className="type">95%</span>
               </div>
               <div className="w-full h-2 bg-bg-card border border-border rounded-full overflow-hidden">
@@ -96,7 +95,7 @@ export default function Skills() {
             
             <div className="mb-4">
               <div className="flex justify-between text-sm mb-1">
-                <span>PHP / Laravel</span>
+                <span>TypeScript / Node.js</span>
                 <span className="type">90%</span>
               </div>
               <div className="w-full h-2 bg-bg-card border border-border rounded-full overflow-hidden">
@@ -106,7 +105,7 @@ export default function Skills() {
             
             <div className="mb-4">
               <div className="flex justify-between text-sm mb-1">
-                <span>Node.js / Express</span>
+                <span>Vibecoding / AI Prompts</span>
                 <span className="type">85%</span>
               </div>
               <div className="w-full h-2 bg-bg-card border border-border rounded-full overflow-hidden">
@@ -120,7 +119,7 @@ export default function Skills() {
             
             <div className="mb-4">
               <div className="flex justify-between text-sm mb-1">
-                <span>SQL (MySQL / PostgreSQL)</span>
+                <span>PostgreSQL / Linux Operations</span>
                 <span className="string">90%</span>
               </div>
               <div className="w-full h-2 bg-bg-card border border-border rounded-full overflow-hidden">
@@ -130,11 +129,11 @@ export default function Skills() {
             
             <div className="mb-4">
               <div className="flex justify-between text-sm mb-1">
-                <span>Docker / DevOps</span>
-                <span className="string">80%</span>
+                <span>Docker / GCP Deployments</span>
+                <span className="string">85%</span>
               </div>
               <div className="w-full h-2 bg-bg-card border border-border rounded-full overflow-hidden">
-                <div className="skill-bar h-full w-0 bg-blue shadow-[0_0_8px_var(--blue)] transition-all duration-1000 ease-out delay-400" data-width="80%"></div>
+                <div className="skill-bar h-full w-0 bg-blue shadow-[0_0_8px_var(--blue)] transition-all duration-1000 ease-out delay-400" data-width="85%"></div>
               </div>
             </div>
           </div>

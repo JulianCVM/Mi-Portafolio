@@ -12,39 +12,32 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  // Intenta obtener el tema del localStorage o usa las preferencias del sistema
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>('dark')
+  const [mounted, setMounted] = useState(false)
   
-  // Efecto para inicializar el tema
   useEffect(() => {
-    // Verifica si hay un tema guardado en localStorage
+    setMounted(true)
     const savedTheme = localStorage.getItem('theme') as Theme | null
-    
-    // Si hay un tema guardado, úsalo
     if (savedTheme) {
       setTheme(savedTheme)
     } else {
-      // Si no hay tema guardado, detecta las preferencias del sistema
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
       setTheme(prefersDark ? 'dark' : 'light')
     }
   }, [])
   
-  // Efecto para aplicar el tema al body
-  useEffect(() => {
-    // Guarda el tema en localStorage
-    localStorage.setItem('theme', theme)
-    
-    // Aplica la clase dark al elemento html cuando sea necesario
-    if (theme === 'dark') {
+  const changeTheme = (newTheme: Theme) => {
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+    if (newTheme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [theme])
+  }
   
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme: changeTheme }}>
       {children}
     </ThemeContext.Provider>
   )

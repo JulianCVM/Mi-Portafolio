@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '@/context/LanguageContext'
 
 type Project = {
   id: number
@@ -17,6 +18,7 @@ type Project = {
 }
 
 export default function Projects() {
+  const { t } = useLanguage()
   const [activeFilter, setActiveFilter] = useState('all')
 
   const projects: Project[] = [
@@ -24,7 +26,7 @@ export default function Projects() {
       id: 1,
       title: 'SistemaBancarioDB',
       pkg: 'com.julian.fintech.banco',
-      description: 'Sistema financiero complejo con triggers y procedimientos almacenados para gestión de cuotas.',
+      description: t('projects.1.desc'),
       tags: ['mysql', 'procedures', 'fintech'],
       metrics: { l1: 'tables', v1: '40+', l2: 'triggers', v2: '15', l3: 'status', v3: '100%' },
       type: 'micro',
@@ -37,7 +39,7 @@ export default function Projects() {
       id: 2,
       title: 'CoffeeManagerAPI',
       pkg: 'com.julian.api.coffee',
-      description: 'Backend para gestión de variedades de café implementando Clean Architecture con PHP 8.',
+      description: t('projects.2.desc'),
       tags: ['php', 'clean-arch', 'docker'],
       metrics: { l1: 'endpoints', v1: '25', l2: 'coverage', v2: '95%', l3: 'arch', v3: 'Clean' },
       type: 'api',
@@ -50,7 +52,7 @@ export default function Projects() {
       id: 3,
       title: 'GeoAppDashboard',
       pkg: 'com.julian.gis.admin',
-      description: 'Panel de administración en Laravel para aplicación móvil, manejando datos espaciales con PostGIS.',
+      description: t('projects.3.desc'),
       tags: ['laravel', 'postgis', 'supabase'],
       metrics: { l1: 'users', v1: 'Admin', l2: 'maps', v2: 'GIS', l3: 'framework', v3: 'Lv10' },
       type: 'full',
@@ -63,7 +65,7 @@ export default function Projects() {
       id: 4,
       title: 'Formula1REST',
       pkg: 'com.julian.sports.f1',
-      description: 'API REST completa para F1 con Node.js, MongoDB y Arquitectura Hexagonal y Docker Compose.',
+      description: t('projects.4.desc'),
       tags: ['nodejs', 'mongodb', 'hexagonal'],
       metrics: { l1: 'routes', v1: '50+', l2: 'containers', v2: 'Db+App', l3: 'uptime', v3: '99%' },
       type: 'api',
@@ -76,7 +78,7 @@ export default function Projects() {
       id: 6,
       title: 'SystemLLM',
       pkg: 'com.julian.ai.llm',
-      description: 'Integración modular de modelos de lenguaje LLM personalizados con Spring Boot y microservicios.',
+      description: t('projects.6.desc'),
       tags: ['java', 'spring-boot', 'ai'],
       metrics: { l1: 'models', v1: 'Custom', l2: 'arch', v2: 'Micro', l3: 'state', v3: 'WIP' },
       type: 'micro',
@@ -89,12 +91,25 @@ export default function Projects() {
       id: 7,
       title: 'RealTimeReports',
       pkg: 'com.julian.dotnet.reports',
-      description: 'ASP.NET Core API con reportes en tiempo real vía SignalR, arquitectura Hexagonal, Docker y Kubernetes.',
+      description: t('projects.7.desc'),
       tags: ['c#', 'dotnet', 'kubernetes'],
       metrics: { l1: 'sockets', v1: 'SignalR', l2: 'infra', v2: 'K8s', l3: 'db', v3: 'SQL' },
       type: 'micro',
       demoUrl: '#',
       githubUrl: 'https://github.com/JulianCVM/.net-proyect',
+      version: 'v1.0',
+      status: 'PROD ✓'
+    },
+    {
+      id: 8,
+      title: 'OmniBaaS Enterprise',
+      pkg: 'com.julian.omni.baas',
+      description: t('projects.8.desc'),
+      tags: ['java', 'zk-framework', 'postgresql', 'linux'],
+      metrics: { l1: 'arch', v1: 'Server-C', l2: 'db', v2: 'ACID', l3: 'status', v3: 'PROD ✓' },
+      type: 'full',
+      demoUrl: '#',
+      githubUrl: 'https://github.com/JulianCVM',
       version: 'v1.0',
       status: 'PROD ✓'
     }
@@ -116,25 +131,25 @@ export default function Projects() {
           onClick={() => setActiveFilter('all')}
           className={`px-4 py-2 rounded-[15px] font-sans text-sm border transition-colors ${activeFilter === 'all' ? 'bg-orange text-bg border-orange' : 'bg-muted/20 border-border text-text hover:border-orange'}`}
         >
-          [@All]
+          {t('projects.filter.all')}
         </button>
         <button 
           onClick={() => setActiveFilter('api')}
           className={`px-4 py-2 rounded-[15px] font-sans text-sm border transition-colors ${activeFilter === 'api' ? 'bg-orange text-bg border-orange' : 'bg-muted/20 border-border text-text hover:border-orange'}`}
         >
-          [@RestAPI]
+          [@{t('projects.filter.api')}]
         </button>
         <button 
           onClick={() => setActiveFilter('micro')}
           className={`px-4 py-2 rounded-[15px] font-sans text-sm border transition-colors ${activeFilter === 'micro' ? 'bg-orange text-bg border-orange' : 'bg-muted/20 border-border text-text hover:border-orange'}`}
         >
-          [@Microservices]
+          [@{t('projects.filter.micro')}]
         </button>
         <button 
           onClick={() => setActiveFilter('full')}
           className={`px-4 py-2 rounded-[15px] font-sans text-sm border transition-colors ${activeFilter === 'full' ? 'bg-orange text-bg border-orange' : 'bg-muted/20 border-border text-text hover:border-orange'}`}
         >
-          [@Fullstack]
+          [@{t('projects.filter.full')}]
         </button>
       </div>
       

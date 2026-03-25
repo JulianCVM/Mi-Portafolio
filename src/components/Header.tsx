@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,11 +36,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { name: 'Main.java', href: '#home', id: 'home' },
-    { name: 'Developer.java', href: '#about', id: 'about' },
-    { name: 'ProjectService.java', href: '#projects', id: 'projects' },
-    { name: 'SkillMatrix.java', href: '#skills', id: 'skills' },
-    { name: 'ContactController.java', href: '#contact', id: 'contact' },
+    { name: t('nav.home') + '.java', href: '#home', id: 'home' },
+    { name: t('nav.about') + '.java', href: '#about', id: 'about' },
+    { name: t('nav.projects') + '.java', href: '#projects', id: 'projects' },
+    { name: t('nav.skills') + '.java', href: '#skills', id: 'skills' },
+    { name: t('nav.contact') + '.java', href: '#contact', id: 'contact' },
   ]
 
   return (

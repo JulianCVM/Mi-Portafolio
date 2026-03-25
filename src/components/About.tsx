@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/context/LanguageContext'
+import Image from 'next/image'
 
 export default function About() {
   const { t } = useLanguage()
@@ -19,8 +20,13 @@ export default function About() {
             <div className="absolute -top-2 -left-2 w-10 h-10 border-t-2 border-l-2 border-orange z-10 transition-all duration-300 group-hover:-top-4 group-hover:-left-4"></div>
             <div className="absolute -bottom-2 -right-2 w-10 h-10 border-b-2 border-r-2 border-orange z-10 transition-all duration-300 group-hover:-bottom-4 group-hover:-right-4"></div>
             
-            <div className="w-full h-full bg-bg-card/80 border border-border rounded-full flex items-center justify-center font-display text-4xl font-extrabold text-muted relative z-[2]">
-              JV
+            <div className="w-full h-full bg-bg-card/80 border border-border rounded-full flex items-center justify-center overflow-hidden relative z-[2]">
+              <Image 
+                src="/foto-perfil.jpeg" 
+                alt="Julián Villamizar" 
+                fill
+                className="object-cover"
+              />
             </div>
             
             {/* Spinning decor */}
@@ -29,13 +35,13 @@ export default function About() {
           
           <div className="mt-8 flex flex-col gap-4">
             <div className="inline-flex bg-muted/10 border-l-2 border-orange py-2 px-4 text-sm font-sans">
-              📍 Ubicación: Colombia
+              {t('about.location')}
             </div>
             <div className="inline-flex bg-muted/10 border-l-2 border-orange py-2 px-4 text-sm font-sans">
-              ☕ Combustible: Café++
+              {t('about.fuel')}
             </div>
             <div className="inline-flex bg-muted/10 border-l-2 border-orange py-2 px-4 text-sm font-sans">
-              🌐 Stack: Java, PHP, Node.js, C#
+              {t('about.stack.title')}
             </div>
           </div>
         </div>
@@ -63,26 +69,26 @@ export default function About() {
             
             <div className="relative before:absolute before:-left-[2.1rem] before:top-1 before:w-3 before:h-3 before:bg-bg before:border-2 before:border-orange before:rounded-full">
               <div className="text-muted text-sm font-sans">commit a3f92b1</div>
-              <div className="text-text font-bold font-display my-1">Desarrollador Backend</div>
-              <div className="text-orange font-sans text-sm mb-1">Proyectos FinTech & GIS</div>
-              <div className="text-muted text-sm font-sans">2021 - Presente</div>
-              <div className="comment mt-2 text-sm font-sans">"Implementación de Clean Architecture, microservicios y bases de datos"</div>
+              <div className="text-text font-bold font-display my-1">{t('about.exp1.role')}</div>
+              <div className="text-orange font-sans text-sm mb-1">{t('about.exp1.company')}</div>
+              <div className="text-muted text-sm font-sans">{t('about.exp1.date')}</div>
+              <div className="comment mt-2 text-sm font-sans">{t('about.exp1.desc')}</div>
             </div>
 
             <div className="relative before:absolute before:-left-[2.1rem] before:top-1 before:w-3 before:h-3 before:bg-bg before:border-2 before:border-orange before:rounded-full">
               <div className="text-muted text-sm font-sans">commit 7d421e0</div>
-              <div className="text-text font-bold font-display my-1">Practicante - Programador</div>
-              <div className="text-orange font-sans text-sm mb-1">SOLVO S.A.S</div>
-              <div className="text-muted text-sm font-sans">Enero 2024 - Presente</div>
-              <div className="comment mt-2 text-sm font-sans">"Desarrollo de módulos con Node.js, TypeScript y Prisma ORM"</div>
+              <div className="text-text font-bold font-display my-1">{t('about.exp2.role')}</div>
+              <div className="text-orange font-sans text-sm mb-1">{t('about.exp2.company')}</div>
+              <div className="text-muted text-sm font-sans">{t('about.exp2.date')}</div>
+              <div className="comment mt-2 text-sm font-sans">{t('about.exp2.desc')}</div>
             </div>
 
             <div className="relative before:absolute before:-left-[2.1rem] before:top-1 before:w-3 before:h-3 before:bg-bg before:border-2 before:border-orange before:rounded-full">
               <div className="text-muted text-sm font-sans">commit 1a89c3d</div>
-              <div className="text-text font-bold font-display my-1">Tecnología en Desarrollo</div>
-              <div className="text-orange font-sans text-sm mb-1">UTS & Campuslands</div>
-              <div className="text-muted text-sm font-sans">En curso</div>
-              <div className="comment mt-2 text-sm font-sans">"Formación en sistemas informáticos y desarrollo avanzado"</div>
+              <div className="text-text font-bold font-display my-1">{t('about.exp3.role')}</div>
+              <div className="text-orange font-sans text-sm mb-1">{t('about.exp3.company')}</div>
+              <div className="text-muted text-sm font-sans">{t('about.exp3.date')}</div>
+              <div className="comment mt-2 text-sm font-sans">{t('about.exp3.desc')}</div>
             </div>
 
           </div>

@@ -49,12 +49,6 @@ export default function AppWrapper({ children }: AppWrapperProps) {
   // Función para aplicar el tema
   const handleThemeChange = (newTheme: 'light' | 'dark') => {
     setTheme(newTheme)
-    // Aplicar la clase de tema inmediatamente
-    if (newTheme === 'dark') {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
   }
   
   // Función para cambiar el idioma
