@@ -16,23 +16,66 @@ export default function Hero() {
   ]
 
   useEffect(() => {
+    let isCancelled = false
+    let timeoutId: NodeJS.Timeout
     setTypedLines([]) // reset when language changes
-    let timeoutIds: NodeJS.Timeout[] = []
     
-    codeLines.forEach((line, index) => {
-      const id = setTimeout(() => {
-        setTypedLines(prev => {
-          if (prev.length === index) {
-            return [...prev, line]
+    const animateText = async () => {
+      const lines: string[] = []
+      for (let i = 0; i < codeLines.length; i++) {
+        if (isCancelled) return
+        lines.push('')
+        
+        const lineStr = codeLines[i]
+        const tokens: string[] = []
+        let currentTag = ''
+        let insideTag = false
+        
+        // Tokenize HTML tags vs characters
+        for (let j = 0; j < lineStr.length; j++) {
+          const char = lineStr[j]
+          if (char === '<') {
+            insideTag = true
+            currentTag += char
+          } else if (char === '>') {
+            currentTag += char
+            tokens.push(currentTag)
+            currentTag = ''
+            insideTag = false
+          } else {
+            if (insideTag) {
+              currentTag += char
+            } else {
+              tokens.push(char)
+            }
           }
-          return prev
-        })
-      }, 400 * (index + 1))
-      timeoutIds.push(id)
-    })
+        }
+        
+        let currentLineBuild = ''
+        for (const token of tokens) {
+          if (isCancelled) return
+          currentLineBuild += token
+          lines[i] = currentLineBuild
+          setTypedLines([...lines])
+          
+          if (!token.startsWith('<')) {
+            // Typing speed: 20-40ms for letters, 10ms for spaces
+            const delay = token === ' ' ? 10 : (Math.random() * 20 + 20) 
+            await new Promise(r => { timeoutId = setTimeout(r, delay) })
+          }
+        }
+        
+        if (isCancelled) return
+        // Pause between lines
+        await new Promise(r => { timeoutId = setTimeout(r, 150) })
+      }
+    }
+    
+    animateText()
     
     return () => {
-      timeoutIds.forEach(clearTimeout)
+      isCancelled = true
+      clearTimeout(timeoutId)
     }
   }, [t])
 

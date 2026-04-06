@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Syne, JetBrains_Mono } from 'next/font/google'
+import { Space_Grotesk, Fira_Code } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -7,16 +7,16 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import { LanguageProvider } from '@/context/LanguageContext'
 import AppWrapper from '@/components/AppWrapper'
 
-const syne = Syne({ 
+const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'], 
-  weight: ['700', '800'],
-  variable: '--font-syne' 
+  weight: ['400', '600', '700'],
+  variable: '--font-display' 
 })
 
-const jetBrainsMono = JetBrains_Mono({ 
+const firaCode = Fira_Code({ 
   subsets: ['latin'], 
   weight: ['400', '500'],
-  variable: '--font-jetbrains' 
+  variable: '--font-mono' 
 })
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${jetBrainsMono.variable} ${syne.variable} font-sans bg-bg text-text min-h-screen flex flex-col`}>
+      <body className={`${firaCode.variable} ${spaceGrotesk.variable} font-sans bg-bg text-text min-h-screen flex flex-col`}>
         <ThemeProvider>
           <LanguageProvider>
             <AppWrapper>

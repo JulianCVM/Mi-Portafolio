@@ -29,8 +29,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['JetBrains Mono', 'monospace'],
-        display: ['Syne', 'sans-serif'],
+        sans: ['var(--font-mono)', 'monospace'],
+        display: ['var(--font-display)', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 30s linear infinite',
